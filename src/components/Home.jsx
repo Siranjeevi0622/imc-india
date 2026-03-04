@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ArrowRight, Zap, Factory, Droplets, Wind, Leaf, Wrench } from 'lucide-react';
 import Factory_img from '../assets/factory_img.jpg';
-
+import industrial_img from '../assets/industrial_img.jpg';
 
 const Home = () => {
   useEffect(() => {
@@ -148,7 +148,7 @@ const Home = () => {
             {/* Image */}
             <div data-aos="zoom-in" className="lg:col-span-1">
               <img
-                src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=400&h=500&fit=crop"
+                src={industrial_img}
                 alt="Industrial Plant"
                 className="rounded-lg shadow-xl w-full h-96 object-cover hover:shadow-2xl transition-shadow duration-300"
               />
