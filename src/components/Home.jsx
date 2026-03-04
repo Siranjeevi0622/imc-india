@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ArrowRight, Zap, Factory, Droplets, Wind, Leaf, Wrench } from 'lucide-react';
+import Factory_img from '../assets/factory_img.jpg';
+
 
 const Home = () => {
   useEffect(() => {
@@ -68,7 +70,7 @@ const Home = () => {
             {/* Image */}
             <div data-aos="fade-right" className="lg:col-span-1">
               <img
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=400&fit=crop"
+                src={Factory_img}
                 alt="Industrial Metrology Centre"
                 className="rounded-lg shadow-xl w-full h-64 md:h-80 object-cover hover:shadow-2xl transition-shadow duration-300"
               />
