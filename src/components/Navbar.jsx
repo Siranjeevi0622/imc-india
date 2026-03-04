@@ -14,6 +14,7 @@ export default function Navbar() {
     { name: 'Enquiry', path: '/enquiry' },
     { name: 'Feedback', path: '/feedback' },
     { name: 'Contact Us', path: '/contact' },
+    {name: 'Adobe', path: '/adobe'}
   ];
 
   const toggleMenu = () => {
