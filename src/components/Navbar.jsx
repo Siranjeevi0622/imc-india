@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
+import imc_logo from '../assets/imc_logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function Navbar() {
               className="flex items-center gap-3 group transition-transform duration-300 hover:scale-105"
             >
               <img
-                src={logo}
+                src={imc_logo}
                 alt="IMC Logo"
                 className="h-18 w-auto object-contain hover:opacity-80 transition-opacity duration-300"
               />
