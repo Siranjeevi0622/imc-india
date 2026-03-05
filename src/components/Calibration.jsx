@@ -1,5 +1,19 @@
 import React, { useState } from 'react';
 import { Filter, ArrowRight } from 'lucide-react';
+import temp1 from '../assets/temp-1.jpeg'
+import temp2 from '../assets/temp-2.jpeg'
+import temp3 from '../assets/temp-3.jpeg'
+import temp4 from '../assets/temp-4.jpeg'
+import temp5 from '../assets/temp-5.jpeg'
+import temp6 from '../assets/temp-6.jpeg'
+import temp7 from '../assets/temp-7.jpeg'
+import temp8 from '../assets/temp-8.jpeg'
+import temp9 from '../assets/temp-9.jpeg'
+import temp10 from '../assets/temp-10.jpeg'
+import temp11 from '../assets/temp-11.jpeg'
+import temp12 from '../assets/temp-12.jpeg'
+import temp13 from '../assets/temp-13.jpeg'
+// import temp14 from '../assets/temp-14.jpeg'
 
 const CalibrationServices = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -10,19 +24,19 @@ const CalibrationServices = () => {
       category: 'Temperature Calibration',
       categoryId: 'temperature',
       items: [
-        { name: 'Temperature Controller / Indicator', image: 'https://images.unsplash.com/photo-1581092056562-40038f70a70e?w=500&h=500&fit=crop' },
-        { name: 'Temperature Sensor (RTD, Thermocouple)', image: 'https://images.unsplash.com/photo-1581092162562-40038f70a6de?w=500&h=500&fit=crop' },
-        { name: 'Temperature Transmitter', image: 'https://images.unsplash.com/photo-1581092335392-8babe2b548be?w=500&h=500&fit=crop' },
-        { name: 'Temperature Calibrator (liquid & dry block)', image: 'https://images.unsplash.com/photo-1581092916550-e323be2ae537?w=500&h=500&fit=crop' },
-        { name: 'Temperature Recorder (Analog/Digital)', image: 'https://images.unsplash.com/photo-1581092335397-112652a9aad4?w=500&h=500&fit=crop' },
-        { name: 'Thermo Switch / Thermostat', image: 'https://images.unsplash.com/photo-1581092056562-40038f70a70e?w=500&h=500&fit=crop' },
-        { name: 'Thermometer (Glass/Digital)', image: 'https://images.unsplash.com/photo-1581092162562-40038f70a6de?w=500&h=500&fit=crop' },
-        { name: 'Hot Air Oven', image: 'https://images.unsplash.com/photo-1581092335392-8babe2b548be?w=500&h=500&fit=crop' },
-        { name: 'Muffle Furnace', image: 'https://images.unsplash.com/photo-1581092916550-e323be2ae537?w=500&h=500&fit=crop' },
-        { name: 'Deep Freezer', image: 'https://images.unsplash.com/photo-1581092335397-112652a9aad4?w=500&h=500&fit=crop' },
-        { name: 'Water Bath', image: 'https://images.unsplash.com/photo-1581092056562-40038f70a70e?w=500&h=500&fit=crop' },
-        { name: 'Incubator', image: 'https://images.unsplash.com/photo-1581092162562-40038f70a6de?w=500&h=500&fit=crop' },
-        { name: 'Refrigerator', image: 'https://images.unsplash.com/photo-1581092335392-8babe2b548be?w=500&h=500&fit=crop' },
+        { name: 'Temperature Controller / Indicator', image: temp1 },
+        { name: 'Temperature Sensor (RTD, Thermocouple)', image: temp2 },
+        { name: 'Temperature Transmitter', image: temp3 },
+        { name: 'Temperature Calibrator (liquid & dry block)', image: temp4 },
+        { name: 'Temperature Recorder (Analog/Digital)', image: temp5 },
+        { name: 'Thermo Switch / Thermostat', image: temp6 },
+        { name: 'Thermometer (Glass/Digital)', image: temp7 },
+        { name: 'Hot Air Oven', image: temp8 },
+        { name: 'Muffle Furnace', image: temp9 },
+        { name: 'Deep Freezer', image: temp10 },
+        { name: 'Water Bath', image: temp11 },
+        { name: 'Incubator', image: temp12 },
+        { name: 'Refrigerator', image: temp13 },
       ],
       icon: '🌡️',
       color: 'orange',
