@@ -55,48 +55,51 @@ const Home = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <main className="min-h-screen bg-white">
       {/* Welcome Section */}
-      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b-2 border-gray-200">
         <div className="max-w-7xl mx-auto">
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-600 mb-12"
+            className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-16 tracking-tight"
             data-aos="fade-down"
           >
-            WELCOME TO IMC
+            INDUSTRIAL<br />
+            <span className="text-orange-600">METROLOGY</span><br />
+            CENTRE
           </h1>
 
-          <div className="grid lg:grid-cols-3 gap-8 items-center">
+          <div className="grid lg:grid-cols-3 gap-12 items-center">
             {/* Image */}
             <div data-aos="fade-right" className="lg:col-span-1">
-              <img
-                src={Factory_img}
-                alt="Industrial Metrology Centre"
-                className="rounded-lg shadow-xl w-full h-64 md:h-80 object-cover hover:shadow-2xl transition-shadow duration-300"
-              />
+              <div className="overflow-hidden rounded-sm shadow-lg">
+                <img
+                  src={Factory_img}
+                  alt="Industrial Metrology Centre"
+                  className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             </div>
 
             {/* Content */}
-            <div data-aos="fade-left" className="lg:col-span-2 space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed text-justify">
-                <span className="font-bold text-gray-900">
+            <div data-aos="fade-left" className="lg:col-span-2 space-y-8">
+              <p className="text-xl text-gray-800 leading-relaxed text-justify font-light">
+                <span className="font-bold text-gray-900 text-2xl block mb-4">
                   Industrial Metrology Centre (IMC)
-                </span>{' '}
+                </span>
                 provides the calibration requirements of various kinds of organizations. The
                 Laboratory is equipped with elite Calibration equipments both Primary and
                 Working / Transfer standards. The Calibration uncertainty of these Master
                 Equipments is traceable to National Physical Laboratory (India) & other National
-                recognized accredited laboratories.{' '}
-                <span className="font-bold text-gray-900">IMC</span> is maintaining quality
-                management system as per ISO/IEC 17025:2005.
+                recognized accredited laboratories. IMC is maintaining quality management system 
+                as per ISO/IEC 17025:2005.
               </p>
 
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 font-semibold group"
+                className="inline-flex items-center gap-3 bg-orange-600 text-white px-8 py-4 rounded-sm hover:bg-orange-700 transition-colors duration-300 font-bold text-lg tracking-wide"
               >
-                Learn More
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                LEARN MORE
+                <ArrowRight className="w-6 h-6" />
               </Link>
             </div>
           </div>
@@ -104,17 +107,17 @@ const Home = () => {
       </section>
 
       {/* Our Sectors Section */}
-      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b-2 border-gray-200">
         <div className="max-w-7xl mx-auto">
           <h2
-            className="text-4xl md:text-5xl font-bold text-orange-600 mb-4"
+            className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-4 tracking-tight"
             data-aos="fade-down"
           >
-            OUR SECTORS
+            OUR <span className="text-orange-600">SECTORS</span>
           </h2>
 
           <p
-            className="text-xl text-blue-600 font-semibold mb-12"
+            className="text-xl text-gray-700 font-semibold mb-16"
             data-aos="fade-up"
           >
             IMC provide Calibration services to the following sectors
@@ -123,20 +126,20 @@ const Home = () => {
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             {/* Sectors List */}
             <div data-aos="fade-right" className="lg:col-span-1">
-              <ul className="space-y-3">
+              <ul className="space-y-0 border-l-4 border-orange-600">
                 {sectors.map((sector, index) => {
                   const IconComponent = sector.icon;
                   return (
                     <li
                       key={sector.name}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-50 transition-colors duration-300 cursor-pointer group"
+                      className="flex items-center gap-4 px-6 py-4 border-b border-gray-300 hover:bg-white transition-colors duration-300 cursor-pointer group"
                       data-aos="fade-up"
-                      data-aos-delay={index * 100}
+                      data-aos-delay={index * 80}
                     >
-                      <div className="p-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white group-hover:shadow-lg transition-all">
+                      <div className="p-3 rounded-sm bg-orange-600 text-white flex-shrink-0">
                         <IconComponent className="w-5 h-5" />
                       </div>
-                      <span className="text-gray-800 font-medium group-hover:text-blue-600 transition-colors">
+                      <span className="text-gray-800 font-semibold text-lg group-hover:text-orange-600 transition-colors">
                         {sector.name}
                       </span>
                     </li>
@@ -147,44 +150,46 @@ const Home = () => {
 
             {/* Image */}
             <div data-aos="zoom-in" className="lg:col-span-1">
-              <img
-                src={industrial_img}
-                alt="Industrial Plant"
-                className="rounded-lg shadow-xl w-full h-96 object-cover hover:shadow-2xl transition-shadow duration-300"
-              />
+              <div className="overflow-hidden rounded-sm shadow-lg">
+                <img
+                  src={industrial_img}
+                  alt="Industrial Plant"
+                  className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             </div>
 
             {/* Calibration Services Sidebar */}
-            <div data-aos="fade-left" className="lg:col-span-1 border-l-4 border-blue-600 pl-6">
-              <h3 className="text-2xl font-bold text-orange-600 mb-6">
-                CALIBRATION SERVICES
+            <div data-aos="fade-left" className="lg:col-span-1 bg-white p-8 rounded-sm shadow-md border-t-4 border-orange-600">
+              <h3 className="text-2xl font-black text-gray-900 mb-8 tracking-tight">
+                CALIBRATION<br />SERVICES
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {calibrationServices.map((service, index) => (
                   <div
                     key={service.title}
-                    className="group cursor-pointer"
+                    className="group cursor-pointer pb-8 border-b border-gray-200 last:border-0 last:pb-0"
                     data-aos="fade-up"
-                    data-aos-delay={index * 150}
+                    data-aos-delay={index * 120}
                   >
-                    <h4 className="text-lg font-bold text-blue-600 mb-2 group-hover:text-cyan-500 transition-colors">
+                    <h4 className="text-lg font-bold text-orange-600 mb-3 group-hover:text-orange-700 transition-colors">
                       {service.title}
                     </h4>
-                    <ul className="space-y-1 mb-2">
+                    <ul className="space-y-2 mb-4">
                       {service.items.map((item) => (
                         <li key={item} className="text-gray-700 text-sm flex items-start gap-2">
-                          <span className="text-blue-600 font-bold mt-1">■</span>
+                          <span className="text-orange-600 font-bold mt-0.5">◆</span>
                           {item}
                         </li>
                       ))}
                     </ul>
                     <Link
                       to={service.link}
-                      className="text-sm text-gray-500 hover:text-blue-600 transition-colors inline-flex items-center gap-1 group"
+                      className="text-sm font-semibold text-orange-600 hover:text-orange-700 transition-colors inline-flex items-center gap-1"
                     >
-                      Readmore...
-                      <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                      Read More
+                      <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
                 ))}
@@ -195,26 +200,26 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-500">
+      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white mb-0">
         <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Need Calibration Services?
+          <h3 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">
+            NEED CALIBRATION<br />SERVICES?
           </h3>
-          <p className="text-lg text-blue-100 mb-8">
+          <p className="text-xl text-gray-300 mb-12 font-light leading-relaxed">
             Contact us today to learn how IMC can help your organization maintain precision and accuracy.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/enquiry"
-              className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              className="px-10 py-4 bg-orange-600 text-white font-bold rounded-sm hover:bg-orange-700 transition-colors duration-300 text-lg tracking-wide"
             >
-              Send Enquiry
+              SEND ENQUIRY
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-300"
+              className="px-10 py-4 border-2 border-white text-white font-bold rounded-sm hover:bg-white hover:text-gray-900 transition-colors duration-300 text-lg tracking-wide"
             >
-              Contact Us
+              CONTACT US
             </Link>
           </div>
         </div>
