@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ArrowRight, Zap, Factory, Droplets, Wind, Leaf, Wrench } from 'lucide-react';
 import Factory_img from '../assets/factory_img.jpg';
-import industrial_img from '../assets/industrial_img.jpg';
+// import industrial_img from '../assets/industrial_img.jpg';
 
 const Home = () => {
   useEffect(() => {
@@ -15,33 +15,33 @@ const Home = () => {
     });
   }, []);
 
-  const calibrationServices = [
-    {
-      title: 'Mechanical Pressure Calibration',
-      items: ['Pressure Gauges', 'Pressure Calibrators'],
-      link: '/calibration',
-    },
-    {
-      title: 'Temperature Calibration',
-      items: ['Temperature Calibrators', 'Temperature Sensors'],
-      link: '/calibration',
-    },
-    {
-      title: 'Mechanical Mass Calibration',
-      items: ['Weighing Machine', 'Weights/Weight Box'],
-      link: '/calibration',
-    },
-    {
-      title: 'NDT Instruments Calibration',
-      items: ['UT machine', 'UTG machine'],
-      link: '/calibration',
-    },
-    {
-      title: 'Mechanical - Linear Calibration',
-      items: ['Vernier Caliper', 'Micrometer'],
-      link: '/calibration',
-    },
-  ];
+  // const calibrationServices = [
+  //   {
+  //     title: 'Mechanical Pressure Calibration',
+  //     items: ['Pressure Gauges', 'Pressure Calibrators'],
+  //     link: '/calibration',
+  //   },
+  //   {
+  //     title: 'Temperature Calibration',
+  //     items: ['Temperature Calibrators', 'Temperature Sensors'],
+  //     link: '/calibration',
+  //   },
+  //   {
+  //     title: 'Mechanical Mass Calibration',
+  //     items: ['Weighing Machine', 'Weights/Weight Box'],
+  //     link: '/calibration',
+  //   },
+  //   {
+  //     title: 'NDT Instruments Calibration',
+  //     items: ['UT machine', 'UTG machine'],
+  //     link: '/calibration',
+  //   },
+  //   {
+  //     title: 'Mechanical - Linear Calibration',
+  //     items: ['Vernier Caliper', 'Micrometer'],
+  //     link: '/calibration',
+  //   },
+  // ];
 
   const sectors = [
     { name: 'Power Plant', icon: Zap },
@@ -56,6 +56,57 @@ const Home = () => {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Hero Banner Section */}
+      <section className="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden group">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 "
+          style={{
+            backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.35) 100%), url(${Factory_img})`,
+            backgroundAttachment: 'fixed'
+          }}
+        />
+
+        {/* Decorative Grid Overlay */}
+        <div className="absolute inset-0 opacity-10" 
+          style={{
+            backgroundImage: 'linear-gradient(90deg, #fff 1px, transparent 1px), linear-gradient(#fff 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl" data-aos="fade-up">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 tracking-tight drop-shadow-lg">
+              PRECISION IN EVERY<br />
+              <span className="text-orange-400">MEASUREMENT</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 font-light mb-10 drop-shadow-md leading-relaxed">
+              Trusted calibration services for industrial excellence across multiple sectors
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/calibration"
+                className="px-8 py-3 bg-orange-600 text-white font-bold rounded-sm hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center gap-2"
+              >
+                EXPLORE SERVICES
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-3 border-2 border-white text-white font-bold rounded-sm hover:bg-white hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                GET IN TOUCH
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Accent Line Bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
+      </section>
+
       {/* Welcome Section */}
       <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b-2 border-gray-200">
         <div className="max-w-7xl mx-auto">
@@ -149,7 +200,7 @@ const Home = () => {
             </div>
 
             {/* Image */}
-            <div data-aos="zoom-in" className="lg:col-span-1">
+            {/* <div data-aos="zoom-in" className="lg:col-span-1">
               <div className="overflow-hidden rounded-sm shadow-lg">
                 <img
                   src={industrial_img}
@@ -157,10 +208,10 @@ const Home = () => {
                   className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Calibration Services Sidebar */}
-            <div data-aos="fade-left" className="lg:col-span-1 bg-white p-8 rounded-sm shadow-md border-t-4 border-orange-600">
+            {/* <div data-aos="fade-left" className="lg:col-span-1 bg-white p-8 rounded-sm shadow-md border-t-4 border-orange-600">
               <h3 className="text-2xl font-black text-gray-900 mb-8 tracking-tight">
                 CALIBRATION<br />SERVICES
               </h3>
@@ -194,7 +245,7 @@ const Home = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
