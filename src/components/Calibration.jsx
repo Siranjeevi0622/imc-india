@@ -243,7 +243,7 @@ const CalibrationServices = () => {
                 return (
                   <div
                     key={index}
-                    className="group bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-orange-300 hover:-translate-y-1 flex flex-col h-full"
+                    className="group bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all duration-500 hover:shadow-2xl  hover:-translate-y-1 flex flex-col h-full"
                   >
                     {/* Image Container with Gradient Overlay */}
                     <div className="relative w-full h-48 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
@@ -320,7 +320,7 @@ const CalibrationServices = () => {
       </div>
 
       {/* Service Categories Overview */}
-      <div className="bg-white border-t border-gray-200 py-16 px-4 sm:px-6 lg:px-8">
+      {/* <div className="bg-white border-t border-gray-200 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-black text-gray-900 mb-12 tracking-tight text-center">SERVICE CATEGORIES</h2>
           
@@ -332,21 +332,20 @@ const CalibrationServices = () => {
                   key={category.categoryId}
                   className={`bg-white border border-gray-200 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group`}
                 >
-                  {/* Icon */}
+                 
                   <div className={`text-4xl mb-4 p-4 rounded-xl w-fit ${colors.bg}`}>
                     {category.icon}
                   </div>
 
-                  {/* Count */}
+                 
                   <div className={`text-3xl font-black ${colors.text} mb-1`}>
                     {category.items.length}
                   </div>
                   <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-4">Services</p>
                   
-                  {/* Divider */}
+           
                   <div className={`h-0.5 bg-gradient-to-r ${colors.accent} mb-4`}></div>
                   
-                  {/* Content */}
                   <h3 className={`text-sm font-black ${colors.text} mb-2 line-clamp-2`}>
                     {category.category}
                   </h3>
@@ -355,7 +354,7 @@ const CalibrationServices = () => {
                     {category.description}
                   </p>
 
-                  {/* Button */}
+                
                   <button className={`w-full ${colors.button} text-white font-bold py-2 px-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn text-xs tracking-wide uppercase hover:shadow-lg`}>
                     <span>Explore</span>
                     <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
@@ -365,7 +364,7 @@ const CalibrationServices = () => {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Stats Section */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">

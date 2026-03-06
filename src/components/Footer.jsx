@@ -12,17 +12,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-slate-300 mt-5">
+    <footer className="text-slate-300" style={{ backgroundColor: '#1F2933' }}>
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-500 p-2 rounded-xl group-hover:shadow-lg transition-shadow">
+              <div className="p-2 rounded-xl group-hover:shadow-lg transition-shadow" style={{ backgroundColor: '#2F5E8F' }}>
                 <FlaskConical className="w-5 h-5 text-white" />
               </div>
-              <span className="text-white font-bold text-lg group-hover:text-cyan-400 transition-colors">IMC</span>
+              <span className="text-white font-bold text-lg group-hover:opacity-80 transition-opacity">IMC</span>
             </Link>
             <p className="text-sm leading-relaxed">
               Setting the standard in industrial metrology with precision, accuracy, and reliability.
@@ -38,8 +38,9 @@ const Footer = () => {
                   <Link 
                     to={link.path} 
                     className="flex items-center group"
+                    style={{ color: '#7FB7B1' }}
                   >
-                    <ChevronRight className="w-4 h-4 mr-2 text-blue-500 group-hover:translate-x-1 transition-transform" />
+                    <ChevronRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" style={{ color: '#2F5E8F' }} />
                     <span className="group-hover:text-white transition-colors">{link.name}</span>
                   </Link>
                 </li>
@@ -52,11 +53,11 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#2F5E8F' }} />
                 <span className="text-sm">123 Metrology Ave, Industrial Park, City 12345</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <Phone className="w-5 h-5 flex-shrink-0" style={{ color: '#2F5E8F' }} />
                 <a 
                   href="tel:+1234567890" 
                   className="text-sm hover:text-white transition-colors"
@@ -65,7 +66,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <Mail className="w-5 h-5 flex-shrink-0" style={{ color: '#2F5E8F' }} />
                 <a 
                   href="mailto:info@imc.com" 
                   className="text-sm hover:text-white transition-colors"
@@ -84,12 +85,17 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className="bg-slate-800 text-white px-4 py-2 rounded-l-lg flex-1 focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-slate-500"
+                className="text-white px-4 py-2 rounded-l-lg flex-1 focus:outline-none focus:ring-2 placeholder-slate-500"
+                style={{ 
+                  backgroundColor: '#374151',
+                  focusRingColor: '#2F5E8F'
+                }}
                 required
               />
               <button 
                 type="submit"
-                className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-r-lg hover:from-blue-700 hover:to-cyan-600 transition-all font-medium"
+                className="text-white px-4 py-2 rounded-r-lg transition-all font-medium hover:opacity-90"
+                style={{ backgroundColor: '#2F5E8F' }}
               >
                 Go
               </button>
@@ -99,7 +105,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-800">
+      <div style={{ borderTopColor: '#374151' }} className="border-t">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-sm text-slate-400">
             © 2024 Industrial Metrology Centre. All rights reserved.

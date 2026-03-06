@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ArrowRight, Zap, Factory, Droplets, Wind, Leaf, Wrench } from 'lucide-react';
 import Factory_img from '../assets/factory_img.jpg';
+import img2 from '../assets/imc-t1.jpeg'
 // import industrial_img from '../assets/industrial_img.jpg';
 
 const Home = () => {
@@ -15,33 +16,33 @@ const Home = () => {
     });
   }, []);
 
-  // const calibrationServices = [
-  //   {
-  //     title: 'Mechanical Pressure Calibration',
-  //     items: ['Pressure Gauges', 'Pressure Calibrators'],
-  //     link: '/calibration',
-  //   },
-  //   {
-  //     title: 'Temperature Calibration',
-  //     items: ['Temperature Calibrators', 'Temperature Sensors'],
-  //     link: '/calibration',
-  //   },
-  //   {
-  //     title: 'Mechanical Mass Calibration',
-  //     items: ['Weighing Machine', 'Weights/Weight Box'],
-  //     link: '/calibration',
-  //   },
-  //   {
-  //     title: 'NDT Instruments Calibration',
-  //     items: ['UT machine', 'UTG machine'],
-  //     link: '/calibration',
-  //   },
-  //   {
-  //     title: 'Mechanical - Linear Calibration',
-  //     items: ['Vernier Caliper', 'Micrometer'],
-  //     link: '/calibration',
-  //   },
-  // ];
+  const calibrationServices = [
+    {
+      title: 'Mechanical Pressure Calibration',
+      items: ['Pressure Gauges', 'Pressure Calibrators'],
+      link: '/calibration',
+    },
+    {
+      title: 'Temperature Calibration',
+      items: ['Temperature Calibrators', 'Temperature Sensors'],
+      link: '/calibration',
+    },
+    {
+      title: 'Mechanical Mass Calibration',
+      items: ['Weighing Machine', 'Weights/Weight Box'],
+      link: '/calibration',
+    },
+    {
+      title: 'NDT Instruments Calibration',
+      items: ['UT machine', 'UTG machine'],
+      link: '/calibration',
+    },
+    {
+      title: 'Mechanical - Linear Calibration',
+      items: ['Vernier Caliper', 'Micrometer'],
+      link: '/calibration',
+    },
+  ];
 
   const sectors = [
     { name: 'Power Plant', icon: Zap },
@@ -55,7 +56,7 @@ const Home = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen" style={{ backgroundColor: '#F3F4F6' }}>
       {/* Hero Banner Section */}
       <section className="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden group">
         {/* Background Image */}
@@ -80,7 +81,7 @@ const Home = () => {
           <div className="text-center max-w-4xl" data-aos="fade-up">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 tracking-tight drop-shadow-lg">
               PRECISION IN EVERY<br />
-              <span className="text-orange-400">MEASUREMENT</span>
+              <span style={{ color: '#7FB7B1' }}>MEASUREMENT</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-200 font-light mb-10 drop-shadow-md leading-relaxed">
               Trusted calibration services for industrial excellence across multiple sectors
@@ -88,14 +89,24 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/calibration"
-                className="px-8 py-3 bg-orange-600 text-white font-bold rounded-sm hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center gap-2"
+                className="px-8 py-3 text-white font-bold rounded-sm hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center gap-2"
+                style={{ backgroundColor: '#2F5E8F' }}
               >
                 EXPLORE SERVICES
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-3 border-2 border-white text-white font-bold rounded-sm hover:bg-white hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="px-8 py-3 border-2 text-white font-bold rounded-sm hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                style={{ borderColor: 'white', color: 'white' }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'white';
+                  e.target.style.color = '#2F5E8F';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.color = 'white';
+                }}
               >
                 GET IN TOUCH
               </Link>
@@ -104,37 +115,40 @@ const Home = () => {
         </div>
 
         {/* Accent Line Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1" style={{
+          backgroundImage: 'linear-gradient(90deg, transparent, #7FB7B1, transparent)'
+        }} />
       </section>
 
       {/* Welcome Section */}
-      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b-2 border-gray-200">
+      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b-2" style={{ backgroundColor: 'white', borderColor: '#E5E7EB' }}>
         <div className="max-w-7xl mx-auto">
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-16 tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-black mb-16 tracking-tight"
             data-aos="fade-down"
+            style={{ color: '#1F2933' }}
           >
             INDUSTRIAL<br />
-            <span className="text-orange-600">METROLOGY</span><br />
+            <span style={{ color: '#2F5E8F' }}>METROLOGY</span><br />
             CENTRE
           </h1>
 
           <div className="grid lg:grid-cols-3 gap-12 items-center">
             {/* Image */}
             <div data-aos="fade-right" className="lg:col-span-1">
-              <div className="overflow-hidden rounded-sm shadow-lg">
+              <div className="overflow-hidden rounded-lg shadow-lg">
                 <img
-                  src={Factory_img}
+                  src={img2}
                   alt="Industrial Metrology Centre"
-                  className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
 
             {/* Content */}
             <div data-aos="fade-left" className="lg:col-span-2 space-y-8">
-              <p className="text-xl text-gray-800 leading-relaxed text-justify font-light">
-                <span className="font-bold text-gray-900 text-2xl block mb-4">
+              <p className="text-xl leading-relaxed text-justify font-light" style={{ color: '#3F78A8' }}>
+                <span className="font-bold text-2xl block mb-4" style={{ color: '#1F2933' }}>
                   Industrial Metrology Centre (IMC)
                 </span>
                 provides the calibration requirements of various kinds of organizations. The
@@ -147,7 +161,8 @@ const Home = () => {
 
               <Link
                 to="/about"
-                className="inline-flex items-center gap-3 bg-orange-600 text-white px-8 py-4 rounded-sm hover:bg-orange-700 transition-colors duration-300 font-bold text-lg tracking-wide"
+                className="inline-flex items-center gap-3 text-white px-8 py-4 rounded-sm transition-opacity duration-300 font-bold text-lg tracking-wide hover:opacity-90"
+                style={{ backgroundColor: '#2F5E8F' }}
               >
                 LEARN MORE
                 <ArrowRight className="w-6 h-6" />
@@ -158,18 +173,20 @@ const Home = () => {
       </section>
 
       {/* Our Sectors Section */}
-      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b-2 border-gray-200">
+      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b-2" style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB' }}>
         <div className="max-w-7xl mx-auto">
           <h2
-            className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-4 tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight"
             data-aos="fade-down"
+            style={{ color: '#1F2933' }}
           >
-            OUR <span className="text-orange-600">SECTORS</span>
+            OUR <span style={{ color: '#2F5E8F' }}>SECTORS</span>
           </h2>
 
           <p
-            className="text-xl text-gray-700 font-semibold mb-16"
+            className="text-xl font-semibold mb-16"
             data-aos="fade-up"
+            style={{ color: '#3F78A8' }}
           >
             IMC provide Calibration services to the following sectors
           </p>
@@ -177,20 +194,21 @@ const Home = () => {
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             {/* Sectors List */}
             <div data-aos="fade-right" className="lg:col-span-1">
-              <ul className="space-y-0 border-l-4 border-orange-600">
+              <ul className="space-y-0 border-l-4" style={{ borderColor: '#2F5E8F' }}>
                 {sectors.map((sector, index) => {
                   const IconComponent = sector.icon;
                   return (
                     <li
                       key={sector.name}
-                      className="flex items-center gap-4 px-6 py-4 border-b border-gray-300 hover:bg-white transition-colors duration-300 cursor-pointer group"
+                      className="flex items-center gap-4 px-6 py-4 border-b transition-colors duration-300 cursor-pointer group"
+                      style={{ borderColor: '#E5E7EB' }}
                       data-aos="fade-up"
                       data-aos-delay={index * 80}
                     >
-                      <div className="p-3 rounded-sm bg-orange-600 text-white flex-shrink-0">
+                      <div className="p-3 rounded-sm text-white flex-shrink-0" style={{ backgroundColor: '#2F5E8F' }}>
                         <IconComponent className="w-5 h-5" />
                       </div>
-                      <span className="text-gray-800 font-semibold text-lg group-hover:text-orange-600 transition-colors">
+                      <span className="font-semibold text-lg transition-colors group-hover:opacity-70" style={{ color: '#3F78A8' }}>
                         {sector.name}
                       </span>
                     </li>
@@ -199,76 +217,77 @@ const Home = () => {
               </ul>
             </div>
 
-            {/* Image */}
-            {/* <div data-aos="zoom-in" className="lg:col-span-1">
-              <div className="overflow-hidden rounded-sm shadow-lg">
-                <img
-                  src={industrial_img}
-                  alt="Industrial Plant"
-                  className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            </div> */}
-
-            {/* Calibration Services Sidebar */}
-            {/* <div data-aos="fade-left" className="lg:col-span-1 bg-white p-8 rounded-sm shadow-md border-t-4 border-orange-600">
-              <h3 className="text-2xl font-black text-gray-900 mb-8 tracking-tight">
+            {/* Calibration Services */}
+            <div data-aos="fade-left" className="lg:col-span-2">
+              <h3 className="text-2xl font-black mb-8 tracking-tight" style={{ color: '#1F2933' }}>
                 CALIBRATION<br />SERVICES
               </h3>
 
-              <div className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-6">
                 {calibrationServices.map((service, index) => (
                   <div
                     key={service.title}
-                    className="group cursor-pointer pb-8 border-b border-gray-200 last:border-0 last:pb-0"
+                    className="group rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer p-6 border-l-4"
+                    style={{ 
+                      backgroundColor: 'white',
+                      borderColor: '#2F5E8F'
+                    }}
                     data-aos="fade-up"
                     data-aos-delay={index * 120}
                   >
-                    <h4 className="text-lg font-bold text-orange-600 mb-3 group-hover:text-orange-700 transition-colors">
-                      {service.title}
-                    </h4>
-                    <ul className="space-y-2 mb-4">
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="p-2 text-white rounded-md flex-shrink-0 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#2F5E8F' }}>
+                        <Zap className="w-5 h-5" />
+                      </div>
+                      <h4 className="text-base font-bold group-hover:opacity-80 transition-opacity" style={{ color: '#1F2933' }}>
+                        {service.title}
+                      </h4>
+                    </div>
+                    <ul className="space-y-3">
                       {service.items.map((item) => (
-                        <li key={item} className="text-gray-700 text-sm flex items-start gap-2">
-                          <span className="text-orange-600 font-bold mt-0.5">◆</span>
-                          {item}
+                        <li key={item} className="text-sm flex items-start gap-3" style={{ color: '#3F78A8' }}>
+                          <span className="font-bold text-lg leading-none mt-0.5" style={{ color: '#7FB7B1' }}>●</span>
+                          <span className="font-medium">{item}</span>
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      to={service.link}
-                      className="text-sm font-semibold text-orange-600 hover:text-orange-700 transition-colors inline-flex items-center gap-1"
-                    >
-                      Read More
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
                   </div>
                 ))}
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white mb-0">
+      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 mb-0" style={{ backgroundColor: '#1F2933' }}>
         <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-          <h3 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">
+          <h3 className="text-5xl md:text-6xl font-black mb-8 tracking-tight text-white">
             NEED CALIBRATION<br />SERVICES?
           </h3>
-          <p className="text-xl text-gray-300 mb-12 font-light leading-relaxed">
+          <p className="text-xl mb-12 font-light leading-relaxed" style={{ color: '#E5E7EB' }}>
             Contact us today to learn how IMC can help your organization maintain precision and accuracy.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/enquiry"
-              className="px-10 py-4 bg-orange-600 text-white font-bold rounded-sm hover:bg-orange-700 transition-colors duration-300 text-lg tracking-wide"
+              className="px-10 py-4 text-white font-bold rounded-sm transition-opacity duration-300 text-lg tracking-wide hover:opacity-90"
+              style={{ backgroundColor: '#2F5E8F' }}
             >
               SEND ENQUIRY
             </Link>
             <Link
               to="/contact"
-              className="px-10 py-4 border-2 border-white text-white font-bold rounded-sm hover:bg-white hover:text-gray-900 transition-colors duration-300 text-lg tracking-wide"
+              className="px-10 py-4 border-2 text-white font-bold rounded-sm transition-all duration-300 text-lg tracking-wide hover:text-gray-900"
+              style={{ borderColor: 'white', color: 'white' }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = 'white';
+                e.target.style.color = '#2F5E8F';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = 'transparent';
+                e.target.style.color = 'white';
+              }}
             >
               CONTACT US
             </Link>
