@@ -260,7 +260,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 mb-0" style={{ backgroundColor: '#1F2933' }}>
+      {/* <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 mb-0" style={{ backgroundColor: '#1F2933' }}>
         <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
           <h3 className="text-5xl md:text-6xl font-black mb-8 tracking-tight text-white">
             NEED CALIBRATION<br />SERVICES?
@@ -293,7 +293,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };

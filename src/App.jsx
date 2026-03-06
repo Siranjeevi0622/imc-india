@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Calibration from './components/Calibration';
 import Footer from './components/Footer';
-import Adobe from './components/Adobe';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Feedback from './components/Feedback';
@@ -22,7 +21,6 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<AboutUs/>} />
         <Route path="/calibration" element={<Calibration/>} />
-        <Route path="/adobe" element={<Adobe/>} />
         <Route path="/accreditation" element={<Accreditation/>} />
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/feedback" element={<Feedback />} />

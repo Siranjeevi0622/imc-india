@@ -358,7 +358,7 @@ const Enquiry = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      {/* <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
           <h3 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
             Have Questions?
@@ -367,7 +367,7 @@ const Enquiry = () => {
             Our team is here to help you. Feel free to reach out for any calibration service inquiries.
           </p>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };
