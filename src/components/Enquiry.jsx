@@ -37,11 +37,9 @@ const Enquiry = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
-    // Reset form
     setFormData({
       companyName: '',
       address: '',
@@ -57,18 +55,17 @@ const Enquiry = () => {
   };
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen" style={{ backgroundColor: 'white' }}>
       {/* Hero Section */}
-      <section className="relative w-full py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+      <section className="relative w-full py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#1F2933' }}>
         {/* Decorative Elements */}
-        
-        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-600 opacity-10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 opacity-10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 opacity-10 rounded-full blur-3xl" style={{ backgroundColor: '#2F5E8F' }} />
+        <div className="absolute bottom-0 left-0 w-96 h-96 opacity-10 rounded-full blur-3xl" style={{ backgroundColor: '#7FB7B1' }} />
 
         <div className="relative max-w-7xl mx-auto">
           <div className="max-w-2xl" data-aos="fade-right">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tight">
-              Send us an <span className="text-orange-500">Enquiry</span>
+              Send us an <span style={{ color: '#7FB7B1' }}>Enquiry</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 font-light leading-relaxed">
               Request calibration services and get in touch with our team. Fill out the form below and we'll get back to you shortly.
@@ -78,17 +75,17 @@ const Enquiry = () => {
       </section>
 
       {/* Form Section */}
-      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F3F4F6' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2" data-aos="fade-right">
-              <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12 border border-gray-100">
-                <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-2 tracking-tight">
+              <div className="rounded-2xl shadow-lg p-8 lg:p-12" style={{ backgroundColor: 'white', border: '1px solid #E5E7EB' }}>
+                <h2 className="text-3xl md:text-4xl font-black mb-2 tracking-tight" style={{ color: '#1F2933' }}>
                   Request For<br />
-                  <span className="text-orange-600">Calibration Service</span>
+                  <span style={{ color: '#2F5E8F' }}>Calibration Service</span>
                 </h2>
-                <p className="text-gray-600 font-light mb-8">
+                <p className="font-light mb-8" style={{ color: '#3F78A8' }}>
                   Please fill out the details below and we'll respond promptly
                 </p>
 
@@ -96,8 +93,8 @@ const Enquiry = () => {
                   {/* Row 1 */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-900 mb-2">
-                        Company Name <span className="text-red-600">*</span>
+                      <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
+                        Company Name <span style={{ color: '#E53E3E' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -105,13 +102,16 @@ const Enquiry = () => {
                         value={formData.companyName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300"
+                        style={{ borderColor: '#E5E7EB' }}
+                        onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                        onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                         placeholder="Enter company name"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-900 mb-2">
-                        Address <span className="text-red-600">*</span>
+                      <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
+                        Address <span style={{ color: '#E53E3E' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -119,7 +119,10 @@ const Enquiry = () => {
                         value={formData.address}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300"
+                        style={{ borderColor: '#E5E7EB' }}
+                        onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                        onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                         placeholder="Enter address"
                       />
                     </div>
@@ -128,8 +131,8 @@ const Enquiry = () => {
                   {/* Row 2 */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-900 mb-2">
-                        Contact Person <span className="text-red-600">*</span>
+                      <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
+                        Contact Person <span style={{ color: '#E53E3E' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -137,13 +140,16 @@ const Enquiry = () => {
                         value={formData.contactPerson}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300"
+                        style={{ borderColor: '#E5E7EB' }}
+                        onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                        onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                         placeholder="Enter contact person name"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-900 mb-2">
-                        Designation <span className="text-red-600">*</span>
+                      <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
+                        Designation <span style={{ color: '#E53E3E' }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -151,7 +157,10 @@ const Enquiry = () => {
                         value={formData.designation}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300"
+                        style={{ borderColor: '#E5E7EB' }}
+                        onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                        onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                         placeholder="Enter designation"
                       />
                     </div>
@@ -160,8 +169,8 @@ const Enquiry = () => {
                   {/* Row 3 */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-900 mb-2">
-                        Phone <span className="text-red-600">*</span>
+                      <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
+                        Phone <span style={{ color: '#E53E3E' }}>*</span>
                       </label>
                       <input
                         type="tel"
@@ -169,12 +178,15 @@ const Enquiry = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300"
+                        style={{ borderColor: '#E5E7EB' }}
+                        onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                        onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                         placeholder="Enter phone number"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-900 mb-2">
+                      <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
                         Fax
                       </label>
                       <input
@@ -182,7 +194,10 @@ const Enquiry = () => {
                         name="fax"
                         value={formData.fax}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300"
+                        style={{ borderColor: '#E5E7EB' }}
+                        onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                        onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                         placeholder="Enter fax number"
                       />
                     </div>
@@ -190,8 +205,8 @@ const Enquiry = () => {
 
                   {/* Email */}
                   <div>
-                    <label className="block text-sm font-bold text-gray-900 mb-2">
-                      Email <span className="text-red-600">*</span>
+                    <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
+                      Email <span style={{ color: '#E53E3E' }}>*</span>
                     </label>
                     <input
                       type="email"
@@ -199,15 +214,18 @@ const Enquiry = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300"
+                      style={{ borderColor: '#E5E7EB' }}
+                      onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                      onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                       placeholder="Enter email address"
                     />
                   </div>
 
                   {/* Place of Calibration */}
                   <div>
-                    <label className="block text-sm font-bold text-gray-900 mb-4">
-                      Place of Calibration <span className="text-red-600">*</span>
+                    <label className="block text-sm font-bold mb-4" style={{ color: '#1F2933' }}>
+                      Place of Calibration <span style={{ color: '#E53E3E' }}>*</span>
                     </label>
                     <div className="flex gap-8">
                       {['Site', 'Lab', 'Both'].map((option) => (
@@ -218,9 +236,10 @@ const Enquiry = () => {
                             value={option}
                             checked={formData.placeOfCalibration === option}
                             onChange={handleChange}
-                            className="w-5 h-5 text-orange-600 focus:ring-2 focus:ring-orange-600"
+                            className="w-5 h-5 focus:ring-2"
+                            style={{ accentColor: '#2F5E8F' }}
                           />
-                          <span className="text-gray-700 font-medium">{option}</span>
+                          <span className="font-medium" style={{ color: '#3F78A8' }}>{option}</span>
                         </label>
                       ))}
                     </div>
@@ -228,8 +247,8 @@ const Enquiry = () => {
 
                   {/* Instruments */}
                   <div>
-                    <label className="block text-sm font-bold text-gray-900 mb-2">
-                      Instruments <span className="text-red-600">*</span>
+                    <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
+                      Instruments <span style={{ color: '#E53E3E' }}>*</span>
                     </label>
                     <textarea
                       name="instruments"
@@ -237,15 +256,18 @@ const Enquiry = () => {
                       onChange={handleChange}
                       required
                       rows="4"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300 resize-none"
+                      style={{ borderColor: '#E5E7EB' }}
+                      onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                      onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                       placeholder="Enter details of instruments to be calibrated"
                     />
                   </div>
 
                   {/* Comments */}
                   <div>
-                    <label className="block text-sm font-bold text-gray-900 mb-2">
-                      Comments <span className="text-red-600">*</span>
+                    <label className="block text-sm font-bold mb-2" style={{ color: '#1F2933' }}>
+                      Comments <span style={{ color: '#E53E3E' }}>*</span>
                     </label>
                     <textarea
                       name="comments"
@@ -253,7 +275,10 @@ const Enquiry = () => {
                       onChange={handleChange}
                       required
                       rows="4"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-all duration-300 resize-none"
+                      style={{ borderColor: '#E5E7EB' }}
+                      onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
+                      onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                       placeholder="Additional comments or special requirements"
                     />
                   </div>
@@ -261,14 +286,15 @@ const Enquiry = () => {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-orange-600 text-white px-8 py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 font-bold text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                    className="w-full text-white px-8 py-4 rounded-lg transition-all duration-300 font-bold text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:opacity-90"
+                    style={{ backgroundColor: '#2F5E8F' }}
                   >
                     <Send className="w-5 h-5" />
                     SEND ENQUIRY
                   </button>
 
                   {submitted && (
-                    <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 font-semibold text-center">
+                    <div className="p-4 rounded-lg text-white font-semibold text-center" style={{ backgroundColor: '#10B981' }}>
                       ✓ Enquiry submitted successfully! We'll get back to you soon.
                     </div>
                   )}
@@ -280,15 +306,15 @@ const Enquiry = () => {
             <div className="lg:col-span-1" data-aos="fade-left">
               <div className="space-y-6">
                 {/* Info Card 1 */}
-                <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-600">
+                <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: 'white', borderLeft: '4px solid #2F5E8F' }}>
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-orange-100 rounded-lg flex-shrink-0">
-                      <Mail className="w-6 h-6 text-orange-600" />
+                    <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
+                      <Mail className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">Email Us</h3>
-                      <p className="text-gray-600 font-light">
-                        <a href="mailto:info@imc.com" className="text-orange-600 hover:text-orange-700">
+                      <h3 className="text-lg font-bold mb-2" style={{ color: '#1F2933' }}>Email Us</h3>
+                      <p style={{ color: '#3F78A8' }} className="font-light">
+                        <a href="mailto:info@imc.com" style={{ color: '#2F5E8F' }} className="hover:opacity-80">
                           info@imc.com
                         </a>
                       </p>
@@ -297,15 +323,15 @@ const Enquiry = () => {
                 </div>
 
                 {/* Info Card 2 */}
-                <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-600">
+                <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: 'white', borderLeft: '4px solid #2F5E8F' }}>
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-orange-100 rounded-lg flex-shrink-0">
-                      <Phone className="w-6 h-6 text-orange-600" />
+                    <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
+                      <Phone className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">Call Us</h3>
-                      <p className="text-gray-600 font-light">
-                        <a href="tel:+91000000000" className="text-orange-600 hover:text-orange-700">
+                      <h3 className="text-lg font-bold mb-2" style={{ color: '#1F2933' }}>Call Us</h3>
+                      <p style={{ color: '#3F78A8' }} className="font-light">
+                        <a href="tel:+91000000000" style={{ color: '#2F5E8F' }} className="hover:opacity-80">
                           +91 (0) 000-000-0000
                         </a>
                       </p>
@@ -314,14 +340,14 @@ const Enquiry = () => {
                 </div>
 
                 {/* Info Card 3 */}
-                <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-600">
+                <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: 'white', borderLeft: '4px solid #2F5E8F' }}>
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-orange-100 rounded-lg flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-orange-600" />
+                    <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
+                      <MapPin className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">Visit Us</h3>
-                      <p className="text-gray-600 font-light">
+                      <h3 className="text-lg font-bold mb-2" style={{ color: '#1F2933' }}>Visit Us</h3>
+                      <p style={{ color: '#3F78A8' }} className="font-light">
                         IMC Office Address<br />
                         City, State, Country
                       </p>
@@ -330,24 +356,24 @@ const Enquiry = () => {
                 </div>
 
                 {/* Features */}
-                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl shadow-lg p-8 border border-orange-200">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Why Choose IMC?</h3>
+                <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: '#F0F4F8', border: '1px solid #E5E7EB' }}>
+                  <h3 className="text-lg font-bold mb-4" style={{ color: '#1F2933' }}>Why Choose IMC?</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
-                      <span className="text-orange-600 font-bold text-lg">✓</span>
-                      <span className="text-gray-700 font-light">ISO/IEC 17025 Certified</span>
+                      <span style={{ color: '#2F5E8F' }} className="font-bold text-lg">✓</span>
+                      <span style={{ color: '#3F78A8' }} className="font-light">ISO/IEC 17025 Certified</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-orange-600 font-bold text-lg">✓</span>
-                      <span className="text-gray-700 font-light">Fast Turnaround Time</span>
+                      <span style={{ color: '#2F5E8F' }} className="font-bold text-lg">✓</span>
+                      <span style={{ color: '#3F78A8' }} className="font-light">Fast Turnaround Time</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-orange-600 font-bold text-lg">✓</span>
-                      <span className="text-gray-700 font-light">Expert Team</span>
+                      <span style={{ color: '#2F5E8F' }} className="font-bold text-lg">✓</span>
+                      <span style={{ color: '#3F78A8' }} className="font-light">Expert Team</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-orange-600 font-bold text-lg">✓</span>
-                      <span className="text-gray-700 font-light">Competitive Pricing</span>
+                      <span style={{ color: '#2F5E8F' }} className="font-bold text-lg">✓</span>
+                      <span style={{ color: '#3F78A8' }} className="font-light">Competitive Pricing</span>
                     </li>
                   </ul>
                 </div>
@@ -356,18 +382,6 @@ const Enquiry = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      {/* <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-          <h3 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
-            Have Questions?
-          </h3>
-          <p className="text-lg text-gray-300 mb-8 font-light">
-            Our team is here to help you. Feel free to reach out for any calibration service inquiries.
-          </p>
-        </div>
-      </section> */}
     </main>
   );
 };
