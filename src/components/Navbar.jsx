@@ -26,30 +26,30 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 " style={{ backgroundColor: '#2F5E8F', borderColor: '#1F2933' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+      <nav className="sticky top-0 z-50 border-b-2 w-full" style={{ backgroundColor: '#2F5E8F', borderColor: '#1F2933' }}>
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto flex justify-between items-center h-20">
             
             {/* Logo Section */}
             <Link
               to="/"
-              className="flex items-center gap-3 group transition-opacity duration-300 hover:opacity-80"
+              className="flex items-center gap-3 group transition-opacity duration-300 hover:opacity-80 shrink-0"
             >
               <img
                 src={imc_logo}
                 alt="IMC Logo"
-                className="h-24 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </Link>
 
-            {/* Desktop Navigation Links */}
-            <ul className="hidden md:flex items-center gap-0">
-              {navLinks.map((link) => (
+            {/* Desktop Navigation Links - lg screens and above */}
+            <ul className="hidden lg:flex items-center gap-1">
+              {navLinks.slice(0, -1).map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
                     onClick={handleLinkClick}
-                    className="px-4 py-2 font-semibold text-sm transition-all duration-300 relative group"
+                    className="px-3 py-2 font-semibold text-sm transition-all duration-300 relative group whitespace-nowrap"
                     style={{ color: 'white' }}
                   >
                     {link.name}
@@ -62,10 +62,19 @@ export default function Navbar() {
               ))}
             </ul>
 
-            {/* Mobile Menu Button */}
+            {/* Contact Us Button - Desktop */}
+            <Link
+              to="/contact"
+              className="hidden lg:flex items-center px-6 py-2 font-semibold text-sm text-white rounded-lg transition-all duration-300 hover:opacity-90 hover:shadow-lg"
+              style={{ backgroundColor: '#FF6B35' }}
+            >
+              Contact Us
+            </Link>
+
+            {/* Mobile Menu Button - hidden on lg screens */}
             <button
               onClick={toggleMenu}
-              className="md:hidden p-2 rounded-sm transition-colors duration-300"
+              className="lg:hidden p-2 rounded-sm transition-colors duration-300 shrink-0"
               style={{ color: 'white' }}
               aria-label="Toggle menu"
             >
@@ -77,24 +86,27 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Navigation Menu */}
+          {/* Mobile/Tablet Navigation Menu - hidden on lg screens */}
           {isOpen && (
-            <div className="md:hidden border-t-2 animate-in fade-in slide-in-from-top-2 duration-200" style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB' }}>
-              <ul className="flex flex-col">
+            <div 
+              className="lg:hidden border-t-2 w-full overflow-y-auto max-h-[calc(100vh-80px)] animate-in fade-in slide-in-from-top-2 duration-200" 
+              style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB' }}
+            >
+              <ul className="flex flex-col w-full">
                 {navLinks.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.name} className="w-full">
                     <Link
                       to={link.path}
                       onClick={handleLinkClick}
-                      className="block px-6 py-4 font-semibold text-sm transition-all duration-200 border-l-4 border-transparent"
+                      className="block w-full px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base transition-all duration-200 border-l-4 border-transparent"
                       style={{ color: '#3F78A8' }}
                       onMouseEnter={(e) => {
-                        e.target.style.backgroundColor = 'white';
-                        e.target.style.borderColor = '#2F5E8F';
+                        e.currentTarget.style.backgroundColor = 'white';
+                        e.currentTarget.style.borderColor = '#2F5E8F';
                       }}
                       onMouseLeave={(e) => {
-                        e.target.style.backgroundColor = 'transparent';
-                        e.target.style.borderColor = 'transparent';
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.borderColor = 'transparent';
                       }}
                     >
                       {link.name}
