@@ -25,6 +25,10 @@ import scale4 from '../assets/scale4.jpeg'
 import scale5 from '../assets/scale5.jpeg'
 import weight1 from '../assets/weight1.jpg'
 import weight2 from '../assets/weight2.jpg'
+import ut1 from '../assets/ut1.jpg'
+import ut2 from '../assets/ut2.jpg'
+import ut3 from '../assets/ut3.jpg'
+import ut4 from '../assets/ut4.jpg'
 
 const CalibrationServices = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -101,10 +105,10 @@ const CalibrationServices = () => {
       category: 'NDT Instruments Calibration',
       categoryId: 'ndt',
       items: [
-        { name: 'UT Machine', image: 'https://images.unsplash.com/photo-1581092162562-40038f70a6de?w=500&h=500&fit=crop' },
-        { name: 'UTG Machine', image: 'https://images.unsplash.com/photo-1581092335392-8babe2b548be?w=500&h=500&fit=crop' },
-        { name: 'MPI Yoke', image: 'https://images.unsplash.com/photo-1581092916550-e323be2ae537?w=500&h=500&fit=crop' },
-        { name: 'Hardness Tester', image: 'https://images.unsplash.com/photo-1581092335397-112652a9aad4?w=500&h=500&fit=crop' },
+        { name: 'UT Machine', image:ut1 },
+        { name: 'UTG Machine', image: ut2},
+        { name: 'MPI Yoke', image: ut3 },
+        { name: 'Hardness Tester', image: ut4 },
       ],
       icon: '🔍',
       color: '#3F78A8',
