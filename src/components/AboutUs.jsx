@@ -41,25 +41,25 @@ const AboutUs = () => {
     "Cement Plants",
     "Steel Plants",
     "Sugar Plants",
-    "Bio-Tech Industries",
-    "Automobile Industries",
     "Pharmaceutical",
     "Marine",
     "Hotels",
+    "Bio-Tech Industries",
     "Educational Institute",
+    "Automobile Industries",
   ];
 
   return (
     <>
       <div className="min-h-screen" style={{ backgroundColor: 'white' }}>
         {/* Header Section */}
-        <div className="border-b-2 py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB' }}>
+        <div className="border-b-2 py-6 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB' }}>
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-block text-white text-sm font-bold px-6 py-2 rounded-sm mb-6 tracking-wide" style={{ backgroundColor: '#2F5E8F' }}>
               ESTABLISHED 2012
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight" style={{ color: '#1F2933' }}>
-              INDUSTRIAL<br />METROLOGY<br />CENTRE
+              INDUSTRIAL<br/>METROLOGY<br/>CENTRE
             </h1>
             <div className="w-20 h-1 mx-auto mb-8" style={{ backgroundColor: '#2F5E8F' }}></div>
             {/* <p className="text-xl max-w-3xl mx-auto font-light leading-relaxed" style={{ color: '#3F78A8' }}>

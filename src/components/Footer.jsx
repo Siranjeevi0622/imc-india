@@ -1,7 +1,7 @@
 // components/Footer.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, ChevronRight, FlaskConical } from 'lucide-react';
+import { MapPin, Phone, Mail, ChevronRight, FlaskConical, Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -9,6 +9,24 @@ const Footer = () => {
     { name: 'Services', path: '/calibration' },
     { name: 'Accreditation', path: '/accreditation' },
     { name: 'Contact', path: '/contact' },
+  ];
+
+  const socialLinks = [
+    { 
+      name: 'Facebook', 
+      icon: Facebook,
+      url: 'https://www.facebook.com/imcindia'
+    },
+    { 
+      name: 'Instagram', 
+      icon: Instagram,
+      url: 'https://www.instagram.com/imcindia'
+    },
+    { 
+      name: 'Twitter', 
+      icon: Twitter,
+      url: 'https://www.twitter.com/imcindia'
+    },
   ];
 
   return (
@@ -27,6 +45,25 @@ const Footer = () => {
             <p className="text-sm leading-relaxed">
               Setting the standard in industrial metrology with precision, accuracy, and reliability.
             </p>
+            {/* Social Media Icons */}
+            <div className="flex gap-4 pt-4">
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
+                    style={{ backgroundColor: '#2F5E8F' }}
+                    title={social.name}
+                  >
+                    <IconComponent className="w-5 h-5 text-white" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           {/* Quick Links */}

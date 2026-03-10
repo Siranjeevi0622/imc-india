@@ -125,20 +125,27 @@ const CalibrationServices = () => {
     return colorMap[color] || '#F3F4F6';
   };
 
- 
+  // const getLightBorder = (color) => {
+  //   const colorMap = {
+  //     '#2F5E8F': '#E0E9F5',
+  //     '#3F78A8': '#E0EFFF',
+  //     '#7FB7B1': '#E0F2ED',
+  //   };
+  //   return colorMap[color] || '#E5E7EB';
+  // };
 
   return (
     <div style={{ backgroundColor: '#F3F4F6' }}>
       {/* Header Section */}
-      <div style={{ backgroundColor: 'white', borderBottom: '1px solid #E5E7EB' }} className="py-16 px-4 sm:px-6 lg:px-8">
+      <div style={{ backgroundColor: 'white', borderBottom: '1px solid #E5E7EB' }} className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight" style={{ color: '#1F2933' }}>
             CALIBRATION<br />SERVICES
           </h1>
           <div className="w-24 h-1.5 mx-auto mb-8 rounded-full" style={{ background: 'linear-gradient(90deg, #2F5E8F, #7FB7B1)' }}></div>
-          <p className="text-xl max-w-3xl mx-auto font-light leading-relaxed" style={{ color: '#3F78A8' }}>
+          {/* <p className="text-xl max-w-3xl mx-auto font-light leading-relaxed" style={{ color: '#3F78A8' }}>
             Discover our comprehensive range of precision calibration services designed for industrial excellence.
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -353,7 +360,7 @@ const CalibrationServices = () => {
 
           <div className="p-8 rounded-2xl text-center hover:shadow-lg transition-all duration-300" style={{ backgroundColor: '#F0F9F7', border: '1px solid #E0F2ED' }}>
             <div className="text-3xl font-black mb-3" style={{ color: '#7FB7B1' }}>
-              ISO/IEC<br />17025
+              ISO/IEC 17025
             </div>
             <h3 className="text-lg font-black mb-2 tracking-tight" style={{ color: '#1F2933' }}>
               Certified
