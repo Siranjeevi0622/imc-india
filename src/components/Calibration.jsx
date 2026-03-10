@@ -13,11 +13,16 @@ import temp10 from '../assets/temp-10.jpeg'
 import temp11 from '../assets/temp-11.jpeg'
 import temp12 from '../assets/temp-12.jpeg'
 import temp13 from '../assets/temp-13.jpeg'
-import vacuum_gauge from '../assets/vacuum_gauge.jpg'
+import pressure1 from '../assets/pressure1.jpg'
 import pressure2 from '../assets/pressure2.jpg'
 import pressure3 from '../assets/pressure3.jpg'
 import pressure4 from '../assets/pressure4.jpg'
 import pressure5 from '../assets/pressure5.jpg'
+import scale1 from '../assets/scale1.jpeg'
+import scale2 from '../assets/scale2.jpeg'
+import scale3 from '../assets/scale3.jpeg'
+import scale4 from '../assets/scale4.jpeg'
+import scale5 from '../assets/scale5.jpeg'
 
 const CalibrationServices = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -52,7 +57,7 @@ const CalibrationServices = () => {
       category: 'Mechanical - Pressure Calibration',
       categoryId: 'pressure',
       items: [
-        { name: 'Pressure, Vacuum, Compound Gauges', image:vacuum_gauge },
+        { name: 'Pressure, Vacuum, Compound Gauges', image:pressure1 },
         { name: 'Pressure Calibrators', image:pressure2 },
         { name: 'Pressure Switches', image: pressure3 },
         { name: 'Pressure Transmitter, Pressure Transducer', image: pressure4 },
@@ -67,11 +72,11 @@ const CalibrationServices = () => {
       category: 'Mechanical - Dimensional Calibration',
       categoryId: 'dimensional',
       items: [
-        { name: 'Measuring Scale', image: 'https://images.unsplash.com/photo-1581092335397-112652a9aad4?w=500&h=500&fit=crop' },
-        { name: 'Measuring Tape', image: 'https://images.unsplash.com/photo-1581092056562-40038f70a70e?w=500&h=500&fit=crop' },
-        { name: 'Vernier Caliper', image: 'https://images.unsplash.com/photo-1581092162562-40038f70a6de?w=500&h=500&fit=crop' },
-        { name: 'Micrometer (External/Internal/Depth)', image: 'https://images.unsplash.com/photo-1581092335392-8babe2b548be?w=500&h=500&fit=crop' },
-        { name: 'Dial Gauge (Plunger/Lever/Bore)', image: 'https://images.unsplash.com/photo-1581092916550-e323be2ae537?w=500&h=500&fit=crop' },
+        { name: 'Measuring Scale', image: scale1 },
+        { name: 'Measuring Tape', image: scale2 },
+        { name: 'Vernier Caliper', image: scale3 },
+        { name: 'Micrometer (External/Internal/Depth)', image:scale4 },
+        { name: 'Dial Gauge (Plunger/Lever/Bore)', image: scale5},
       ],
       icon: '📏',
       color: '#7FB7B1',
