@@ -115,7 +115,7 @@ const Feedback = () => {
                   className="p-4 rounded-xl flex items-start gap-3"
                   style={{ backgroundColor: '#D1FAE5' }}
                 >
-                  <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#059669' }} />
+                  <CheckCircle className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#059669' }} />
                   <p className="text-sm font-bold" style={{ color: '#065F46' }}>
                     Thank you! Your feedback has been submitted.
                   </p>

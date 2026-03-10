@@ -45,25 +45,8 @@ const Footer = () => {
             <p className="text-sm leading-relaxed">
               Setting the standard in industrial metrology with precision, accuracy, and reliability.
             </p>
-            {/* Social Media Icons */}
-            <div className="flex gap-4 pt-4">
-              {socialLinks.map((social) => {
-                const IconComponent = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
-                    style={{ backgroundColor: '#2F5E8F' }}
-                    title={social.name}
-                  >
-                    <IconComponent className="w-5 h-5 text-white" />
-                  </a>
-                );
-              })}
-            </div>
+         
+           
           </div>
 
           {/* Quick Links */}
@@ -90,11 +73,11 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#2F5E8F' }} />
+                <MapPin className="w-5 h-5  mt-0.5" style={{ color: '#2F5E8F' }} />
                 <span className="text-sm">123 Metrology Ave, Industrial Park, City 12345</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 flex-shrink-0" style={{ color: '#2F5E8F' }} />
+                <Phone className="w-5 h-5 shrink-0" style={{ color: '#2F5E8F' }} />
                 <a 
                   href="tel:+1234567890" 
                   className="text-sm hover:text-white transition-colors"
@@ -103,7 +86,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 flex-shrink-0" style={{ color: '#2F5E8F' }} />
+                <Mail className="w-5 h-5 shrink-0" style={{ color: '#2F5E8F' }} />
                 <a 
                   href="mailto:info@imc.com" 
                   className="text-sm hover:text-white transition-colors"
@@ -114,29 +97,28 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/*Social Icons */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Stay Updated</h4>
-            <p className="text-sm mb-3">Subscribe to our newsletter</p>
-            <form className="flex" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Your email"
-                className="text-white px-4 py-2 rounded-l-lg flex-1 focus:outline-none focus:ring-2 placeholder-slate-500"
-                style={{ 
-                  backgroundColor: '#374151',
-                  focusRingColor: '#2F5E8F'
-                }}
-                required
-              />
-              <button 
-                type="submit"
-                className="text-white px-4 py-2 rounded-r-lg transition-all font-medium hover:opacity-90"
-                style={{ backgroundColor: '#2F5E8F' }}
-              >
-                Go
-              </button>
-            </form>
+            <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+            <p className="text-sm mb-6">Connect with us on social media</p>
+            <div className="flex gap-4">
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                    style={{ backgroundColor: '#2F5E8F' }}
+                    title={social.name}
+                  >
+                    <IconComponent className="w-5 h-5 text-white" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

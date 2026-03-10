@@ -308,7 +308,7 @@ const Enquiry = () => {
                 {/* Info Card 1 */}
                 <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: 'white', borderLeft: '4px solid #2F5E8F' }}>
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
+                    <div className="p-3 rounded-lg shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
                       <Mail className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                     </div>
                     <div>
@@ -325,7 +325,7 @@ const Enquiry = () => {
                 {/* Info Card 2 */}
                 <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: 'white', borderLeft: '4px solid #2F5E8F' }}>
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
+                    <div className="p-3 rounded-lg shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
                       <Phone className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                     </div>
                     <div>
@@ -342,7 +342,7 @@ const Enquiry = () => {
                 {/* Info Card 3 */}
                 <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: 'white', borderLeft: '4px solid #2F5E8F' }}>
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
+                    <div className="p-3 rounded-lg shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
                       <MapPin className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                     </div>
                     <div>
