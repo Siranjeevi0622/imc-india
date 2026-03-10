@@ -227,7 +227,7 @@ const CalibrationServices = () => {
                     >
                       <span className="text-base">{category.icon}</span>
                       <span className="text-xs leading-snug flex-1">{category.category}</span>
-                      {isActive && <Check className="w-4 h-4 flex-shrink-0" />}
+                      {isActive && <Check className="w-4 h-4 shrink-0" />}
                     </button>
                   );
                 })}
@@ -276,7 +276,7 @@ const CalibrationServices = () => {
                       />
                       
                       {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                       {/* Icon Badge - Bottom Left */}
                       <div className="absolute bottom-4 left-4 w-14 h-14 rounded-xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-125 transition-transform duration-300 backdrop-blur-sm" style={{ backgroundColor: getLightBg(item.color), border: `2px solid ${item.color}` }}>
@@ -285,7 +285,7 @@ const CalibrationServices = () => {
                     </div>
 
                     {/* Card Content */}
-                    <div className="p-6 flex flex-col flex-grow">
+                    <div className="p-6 flex flex-col grow">
                       {/* Category Tag */}
                       <div className="mb-4 inline-flex items-center gap-2 w-fit">
                         <div className="w-2 h-2 rounded-full" style={{ backgroundColor: item.color }}></div>
@@ -300,17 +300,17 @@ const CalibrationServices = () => {
                       </h3>
 
                       {/* Features with Dots */}
-                      <div className="space-y-2.5 mb-6 flex-grow">
+                      <div className="space-y-2.5 mb-6 grow">
                         <div className="flex items-start gap-3">
-                          <div className="w-1 h-1 rounded-full flex-shrink-0 mt-2" style={{ backgroundColor: item.color }}></div>
+                          <div className="w-1 h-1 rounded-full shrink-0 mt-2" style={{ backgroundColor: item.color }}></div>
                           <span className="text-xs font-medium leading-snug" style={{ color: '#1F2933' }}>ISO/IEC 17025:2005 Certified</span>
                         </div>
                         <div className="flex items-start gap-3">
-                          <div className="w-1 h-1 rounded-full flex-shrink-0 mt-2" style={{ backgroundColor: item.color }}></div>
+                          <div className="w-1 h-1 rounded-full shrink-0 mt-2" style={{ backgroundColor: item.color }}></div>
                           <span className="text-xs font-medium leading-snug" style={{ color: '#1F2933' }}>NPL Traceable</span>
                         </div>
                         <div className="flex items-start gap-3">
-                          <div className="w-1 h-1 rounded-full flex-shrink-0 mt-2" style={{ backgroundColor: item.color }}></div>
+                          <div className="w-1 h-1 rounded-full shrink-0 mt-2" style={{ backgroundColor: item.color }}></div>
                           <span className="text-xs font-medium leading-snug" style={{ color: '#1F2933' }}>Expert Support</span>
                         </div>
                       </div>

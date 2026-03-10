@@ -120,7 +120,7 @@ const Contact = () => {
                   data-aos-delay={index * 100}
                 >
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
+                    <div className="p-3 rounded-lg shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
                       <IconComponent className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                     </div>
                     <div>
@@ -268,7 +268,7 @@ const Contact = () => {
               {/* Business Hours */}
               <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: 'white' }}>
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
+                  <div className="p-3 rounded-lg shrink-0" style={{ backgroundColor: '#F0F4F8' }}>
                     <Clock className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                   </div>
                   <div>
@@ -296,7 +296,7 @@ const Contact = () => {
               {/* Quick Response */}
               <div className="rounded-2xl shadow-lg p-8" style={{ backgroundColor: '#F0F4F8', border: '2px solid #E0E9F5' }}>
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: 'white' }}>
+                  <div className="p-3 rounded-lg shrink-0" style={{ backgroundColor: 'white' }}>
                     <MessageSquare className="w-6 h-6" style={{ color: '#2F5E8F' }} />
                   </div>
                   <div>
@@ -359,24 +359,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#1F2933' }}>
-        <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-          <h3 className="text-4xl md:text-5xl font-black mb-6 tracking-tight text-white">
-            Looking for <span style={{ color: '#7FB7B1' }}>Calibration Services?</span>
-          </h3>
-          <p className="text-lg mb-8 font-light" style={{ color: '#D1D5DB' }}>
-            Explore our comprehensive range of calibration services tailored to your industrial needs.
-          </p>
-          <Link
-            to="/calibration"
-            className="inline-flex items-center gap-3 px-10 py-4 text-white font-bold rounded-lg transition-opacity duration-300 text-lg hover:opacity-90"
-            style={{ backgroundColor: '#2F5E8F' }}
-          >
-            EXPLORE SERVICES
-          </Link>
-        </div>
-      </section> */}
+     
     </main>
   );
 };

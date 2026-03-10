@@ -66,7 +66,7 @@ const Accreditation = () => {
                 data-aos-delay={index * 100}
               >
                 <div className="flex items-start gap-3 mb-4">
-                  <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#2F5E8F' }} />
+                  <CheckCircle2 className="w-6 h-6 shrink-0 mt-1" style={{ color: '#2F5E8F' }} />
                   <h3 className="text-xl font-bold" style={{ color: '#1F2933' }}>
                     {item.title}
                   </h3>
@@ -213,42 +213,7 @@ const Accreditation = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* <section className="py-20 px-30 lg:py-28 px-4 sm:px-6 lg:px-8 text-white" style={{ backgroundColor: '#1F2933' }}>
-        <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
-            Ready to Get <span style={{ color: '#7FB7B1' }}>Certified?</span>
-          </h3>
-          <p className="text-lg mb-12 font-light" style={{ color: '#D1D5DB' }}>
-            Contact us today to learn how IMC can help your organization maintain precision and accuracy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-3 px-10 py-4 text-white font-bold rounded-lg transition-colors duration-300 text-lg hover:opacity-90"
-              style={{ backgroundColor: '#2F5E8F' }}
-            >
-              GET IN TOUCH
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/calibration"
-              className="inline-flex items-center justify-center gap-3 px-10 py-4 border-2 text-white font-bold rounded-lg transition-colors duration-300 text-lg hover:text-gray-900"
-              style={{ borderColor: 'white', color: 'white' }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = 'white';
-                e.target.style.color = '#2F5E8F';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = 'transparent';
-                e.target.style.color = 'white';
-              }}
-            >
-              EXPLORE SERVICES
-            </Link>
-          </div>
-        </div>
-      </section> */}
+    
     </main>
   );
 };

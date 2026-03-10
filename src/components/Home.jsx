@@ -205,7 +205,7 @@ const Home = () => {
                       data-aos="fade-up"
                       data-aos-delay={index * 80}
                     >
-                      <div className="p-3 rounded-sm text-white flex-shrink-0" style={{ backgroundColor: '#2F5E8F' }}>
+                      <div className="p-3 rounded-sm text-white shrink-0" style={{ backgroundColor: '#2F5E8F' }}>
                         <IconComponent className="w-5 h-5" />
                       </div>
                       <span className="font-semibold text-lg transition-colors group-hover:opacity-70" style={{ color: '#3F78A8' }}>
@@ -236,7 +236,7 @@ const Home = () => {
                     data-aos-delay={index * 120}
                   >
                     <div className="flex items-start gap-3 mb-4">
-                      <div className="p-2 text-white rounded-md flex-shrink-0 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#2F5E8F' }}>
+                      <div className="p-2 text-white rounded-md shrink-0 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#2F5E8F' }}>
                         <Zap className="w-5 h-5" />
                       </div>
                       <h4 className="text-base font-bold group-hover:opacity-80 transition-opacity" style={{ color: '#1F2933' }}>
