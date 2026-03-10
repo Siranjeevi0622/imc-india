@@ -13,7 +13,11 @@ import temp10 from '../assets/temp-10.jpeg'
 import temp11 from '../assets/temp-11.jpeg'
 import temp12 from '../assets/temp-12.jpeg'
 import temp13 from '../assets/temp-13.jpeg'
-
+import vacuum_gauge from '../assets/vacuum_gauge.jpg'
+import pressure2 from '../assets/pressure2.jpg'
+import pressure3 from '../assets/pressure3.jpg'
+import pressure4 from '../assets/pressure4.jpg'
+import pressure5 from '../assets/pressure5.jpg'
 
 const CalibrationServices = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -48,11 +52,11 @@ const CalibrationServices = () => {
       category: 'Mechanical - Pressure Calibration',
       categoryId: 'pressure',
       items: [
-        { name: 'Pressure, Vacuum, Compound Gauges', image: 'https://images.unsplash.com/photo-1581092550-e323be2ae537?w=500&h=500&fit=crop' },
-        { name: 'Pressure Calibrators', image: 'https://images.unsplash.com/photo-1581092335397-112652a9aad4?w=500&h=500&fit=crop' },
-        { name: 'Pressure Switches', image: 'https://images.unsplash.com/photo-1581092056562-40038f70a70e?w=500&h=500&fit=crop' },
-        { name: 'Pressure Transmitter, Pressure Transducer', image: 'https://images.unsplash.com/photo-1581092162562-40038f70a6de?w=500&h=500&fit=crop' },
-        { name: 'Pressure Recorder (Analog/Digital)', image: 'https://images.unsplash.com/photo-1581092335392-8babe2b548be?w=500&h=500&fit=crop' },
+        { name: 'Pressure, Vacuum, Compound Gauges', image:vacuum_gauge },
+        { name: 'Pressure Calibrators', image:pressure2 },
+        { name: 'Pressure Switches', image: pressure3 },
+        { name: 'Pressure Transmitter, Pressure Transducer', image: pressure4 },
+        { name: 'Pressure Recorder (Analog/Digital)', image: pressure5 },
       ],
       icon: '⚙️',
       color: '#3F78A8',
