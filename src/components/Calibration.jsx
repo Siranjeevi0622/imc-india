@@ -23,6 +23,8 @@ import scale2 from '../assets/scale2.jpeg'
 import scale3 from '../assets/scale3.jpeg'
 import scale4 from '../assets/scale4.jpeg'
 import scale5 from '../assets/scale5.jpeg'
+import weight1 from '../assets/weight1.jpg'
+import weight2 from '../assets/weight2.jpg'
 
 const CalibrationServices = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -87,8 +89,8 @@ const CalibrationServices = () => {
       category: 'Mechanical - Mass Calibration',
       categoryId: 'mass',
       items: [
-        { name: 'Weighing Machine', image: 'https://images.unsplash.com/photo-1581092335397-112652a9aad4?w=500&h=500&fit=crop' },
-        { name: 'Weights/Weight Box', image: 'https://images.unsplash.com/photo-1581092056562-40038f70a70e?w=500&h=500&fit=crop' },
+        { name: 'Weighing Machine', image: weight1},
+        { name: 'Weights/Weight Box', image: weight2 },
       ],
       icon: '⚖️',
       color: '#2F5E8F',
