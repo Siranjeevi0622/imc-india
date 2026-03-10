@@ -62,9 +62,9 @@ const AboutUs = () => {
               INDUSTRIAL<br />METROLOGY<br />CENTRE
             </h1>
             <div className="w-20 h-1 mx-auto mb-8" style={{ backgroundColor: '#2F5E8F' }}></div>
-            <p className="text-xl max-w-3xl mx-auto font-light leading-relaxed" style={{ color: '#3F78A8' }}>
+            {/* <p className="text-xl max-w-3xl mx-auto font-light leading-relaxed" style={{ color: '#3F78A8' }}>
               Welcome to IMC, your trusted partner in precision and accuracy. We are a leading calibration laboratory dedicated to providing top-notch calibration services for a wide range of industries. With our state-of-the-art facilities and highly skilled technicians, we ensure that your instruments and equipment meet the highest standards of performance and reliability.
-            </p>
+            </p> */}
           </div>
         </div>
 

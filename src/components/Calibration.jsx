@@ -126,14 +126,7 @@ const CalibrationServices = () => {
     return colorMap[color] || '#F3F4F6';
   };
 
-  const getLightBorder = (color) => {
-    const colorMap = {
-      '#2F5E8F': '#E0E9F5',
-      '#3F78A8': '#E0EFFF',
-      '#7FB7B1': '#E0F2ED',
-    };
-    return colorMap[color] || '#E5E7EB';
-  };
+ 
 
   return (
     <div style={{ backgroundColor: '#F3F4F6' }}>
