@@ -51,18 +51,18 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen" style={{ backgroundColor: 'white' }}>
         {/* Header Section */}
-        <div className="bg-gray-50 border-b-2 border-gray-200 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="border-b-2 py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB' }}>
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-block bg-orange-600 text-white text-sm font-bold px-6 py-2 rounded-sm mb-6 tracking-wide">
+            <div className="inline-block text-white text-sm font-bold px-6 py-2 rounded-sm mb-6 tracking-wide" style={{ backgroundColor: '#2F5E8F' }}>
               ESTABLISHED 2012
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight" style={{ color: '#1F2933' }}>
               INDUSTRIAL<br />METROLOGY<br />CENTRE
             </h1>
-            <div className="w-20 h-1 bg-orange-600 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed">
+            <div className="w-20 h-1 mx-auto mb-8" style={{ backgroundColor: '#2F5E8F' }}></div>
+            <p className="text-xl max-w-3xl mx-auto font-light leading-relaxed" style={{ color: '#3F78A8' }}>
               Welcome to IMC, your trusted partner in precision and accuracy. We are a leading calibration laboratory dedicated to providing top-notch calibration services for a wide range of industries. With our state-of-the-art facilities and highly skilled technicians, we ensure that your instruments and equipment meet the highest standards of performance and reliability.
             </p>
           </div>
@@ -72,15 +72,15 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           
           {/* About Section - Two Column */}
-          <div className="grid md:grid-cols-2 gap-12 mb-16 items-center border-b-2 border-gray-200 pb-16">
+          <div className="grid md:grid-cols-2 gap-12 mb-16 items-center border-b-2 pb-16" style={{ borderColor: '#E5E7EB' }}>
             {/* Left - CEO Credentials */}
-            <div className="bg-gray-900 text-white p-10 rounded-sm shadow-lg">
+            <div className="text-white p-10 rounded-sm shadow-lg" style={{ backgroundColor: '#1F2933' }}>
               <h2 className="text-3xl font-black mb-6 tracking-tight">PRECISION • QUALITY • RELIABILITY</h2>
-              <p className="text-gray-300 leading-relaxed mb-6 font-light text-lg">
+              <p className="leading-relaxed mb-6 font-light text-lg" style={{ color: '#D1D5DB' }}>
                 The Company's CEO brings proficient experience as Quality Manager in a NABL-accredited firm in India,
                 and Technical Manager in a SAC-SINGLAS accredited firm in Singapore.
               </p>
-              <p className="text-gray-300 leading-relaxed font-light text-lg">
+              <p className="leading-relaxed font-light text-lg" style={{ color: '#D1D5DB' }}>
                 We receive training from CETE Bangalore, NMC-Singapore, Fluke Singapore, and participate in
                 inter-laboratory comparisons to ensure technical competency.
               </p>
@@ -88,20 +88,20 @@ const AboutUs = () => {
 
             {/* Right - About IMC */}
             <div className="space-y-6">
-              <p className="text-lg text-gray-800 leading-relaxed">
-                <span className="font-bold text-gray-900 text-xl block mb-2">Industrial Metrology Centre (IMC)</span>
+              <p className="text-lg leading-relaxed" style={{ color: '#1F2933' }}>
+                <span className="font-bold text-xl block mb-2" style={{ color: '#1F2933' }}>Industrial Metrology Centre (IMC)</span>
                 provides calibration requirements for various organizations. The Laboratory is equipped with elite 
                 Calibration equipments – both Primary and Working/Transfer standards. The Calibration uncertainty of 
                 these Master Equipments is traceable to National Physical Laboratory (India) & other nationally 
                 recognized accredited laboratories.
               </p>
-              <p className="text-lg text-gray-800 leading-relaxed">
-                IMC maintains a quality management system as per <span className="font-bold text-orange-600">ISO/IEC 17025:2005</span>.
+              <p className="text-lg leading-relaxed" style={{ color: '#1F2933' }}>
+                IMC maintains a quality management system as per <span className="font-bold" style={{ color: '#2F5E8F' }}>ISO/IEC 17025:2005</span>.
                 Since establishment in 2012, the company has focused strongly and consistently on calibration with
                 single-minded dedication to quality and reliability. All personnel are well qualified, trained, and highly
                 experienced in calibration activities.
               </p>
-              <p className="text-lg text-gray-800 leading-relaxed">
+              <p className="text-lg leading-relaxed" style={{ color: '#1F2933' }}>
                 With a full range of equipment, we are able to consistently meet quick turn-around time that satisfies
                 customers' emergency situations.
               </p>
@@ -111,17 +111,17 @@ const AboutUs = () => {
           {/* Services Grid - 3 Columns */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* IMC Offers */}
-            <div className="bg-white border-2 border-gray-200 p-8 rounded-sm hover:shadow-lg transition-shadow duration-300 group">
+            <div className="p-8 rounded-sm hover:shadow-lg transition-shadow duration-300 group" style={{ backgroundColor: 'white', border: '2px solid #E5E7EB' }}>
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-orange-600 text-white rounded-sm flex items-center justify-center font-bold text-xl group-hover:bg-orange-700 transition-colors">
+                <div className="w-12 h-12 text-white rounded-sm flex items-center justify-center font-bold text-xl group-hover:opacity-80 transition-opacity" style={{ backgroundColor: '#2F5E8F' }}>
                   🔧
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 ml-4 tracking-tight">IMC OFFERS</h3>
+                <h3 className="text-xl font-bold ml-4 tracking-tight" style={{ color: '#1F2933' }}>IMC OFFERS</h3>
               </div>
               <ul className="space-y-3">
                 {coreServices.map((service, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-gray-700">
-                    <span className="text-orange-600 font-bold mt-1">▪</span>
+                  <li key={idx} className="flex items-start gap-3" style={{ color: '#3F78A8' }}>
+                    <span className="font-bold mt-1" style={{ color: '#2F5E8F' }}>▪</span>
                     <span className="text-lg">{service}</span>
                   </li>
                 ))}
@@ -129,17 +129,17 @@ const AboutUs = () => {
             </div>
 
             {/* Consultancy Services */}
-            <div className="bg-white border-2 border-gray-200 p-8 rounded-sm hover:shadow-lg transition-shadow duration-300 group">
+            <div className="p-8 rounded-sm hover:shadow-lg transition-shadow duration-300 group" style={{ backgroundColor: 'white', border: '2px solid #E5E7EB' }}>
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-orange-600 text-white rounded-sm flex items-center justify-center font-bold text-xl group-hover:bg-orange-700 transition-colors">
+                <div className="w-12 h-12 text-white rounded-sm flex items-center justify-center font-bold text-xl group-hover:opacity-80 transition-opacity" style={{ backgroundColor: '#2F5E8F' }}>
                   📋
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 ml-4 tracking-tight">CONSULTANCY SERVICES</h3>
+                <h3 className="text-xl font-bold ml-4 tracking-tight" style={{ color: '#1F2933' }}>CONSULTANCY SERVICES</h3>
               </div>
               <ul className="space-y-3">
                 {consultancyServices.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-gray-700">
-                    <span className="text-orange-600 font-bold mt-1">▪</span>
+                  <li key={idx} className="flex items-start gap-3" style={{ color: '#3F78A8' }}>
+                    <span className="font-bold mt-1" style={{ color: '#2F5E8F' }}>▪</span>
                     <span className="text-lg">{item}</span>
                   </li>
                 ))}
@@ -147,21 +147,21 @@ const AboutUs = () => {
             </div>
 
             {/* Training & Seminars */}
-            <div className="bg-white border-2 border-gray-200 p-8 rounded-sm hover:shadow-lg transition-shadow duration-300 group md:col-span-2 lg:col-span-1">
+            <div className="p-8 rounded-sm hover:shadow-lg transition-shadow duration-300 group md:col-span-2 lg:col-span-1" style={{ backgroundColor: 'white', border: '2px solid #E5E7EB' }}>
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-orange-600 text-white rounded-sm flex items-center justify-center font-bold text-xl group-hover:bg-orange-700 transition-colors">
+                <div className="w-12 h-12 text-white rounded-sm flex items-center justify-center font-bold text-xl group-hover:opacity-80 transition-opacity" style={{ backgroundColor: '#2F5E8F' }}>
                   🎓
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 ml-4 tracking-tight">TRAINING & SEMINARS</h3>
+                <h3 className="text-xl font-bold ml-4 tracking-tight" style={{ color: '#1F2933' }}>TRAINING & SEMINARS</h3>
               </div>
               <ul className="space-y-3">
                 {trainingHighlights.slice(0, 3).map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-gray-700">
-                    <span className="text-orange-600 font-bold mt-1">▪</span>
+                  <li key={idx} className="flex items-start gap-3" style={{ color: '#3F78A8' }}>
+                    <span className="font-bold mt-1" style={{ color: '#2F5E8F' }}>▪</span>
                     <span className="text-lg">{item}</span>
                   </li>
                 ))}
-                <li className="text-sm text-gray-500 mt-4 italic pl-4 border-l-2 border-gray-300">
+                <li className="text-sm mt-4 italic pl-4 border-l-2" style={{ color: '#9CA3AF', borderColor: '#E5E7EB' }}>
                   + more comprehensive programs available
                 </li>
               </ul>
@@ -171,16 +171,29 @@ const AboutUs = () => {
           {/* Categories & Sectors Section */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {/* Calibration Categories */}
-            <div className="bg-gray-50 border-2 border-gray-200 p-8 rounded-sm">
-              <h3 className="text-2xl font-black text-gray-900 mb-8 tracking-tight flex items-center">
-                <span className="bg-orange-600 text-white p-3 rounded-sm mr-4 text-xl">📊</span>
+            <div className="p-8 rounded-sm" style={{ backgroundColor: '#F3F4F6', border: '2px solid #E5E7EB' }}>
+              <h3 className="text-2xl font-black mb-8 tracking-tight flex items-center" style={{ color: '#1F2933' }}>
+                <span className="text-white p-3 rounded-sm mr-4 text-xl" style={{ backgroundColor: '#2F5E8F' }}>📊</span>
                 CALIBRATION CATEGORIES
               </h3>
               <div className="flex flex-wrap gap-3">
                 {calibrationCategories.map((cat, idx) => (
                   <span 
                     key={idx} 
-                    className="bg-white text-orange-600 px-4 py-2 rounded-sm text-base font-semibold border-2 border-orange-600 hover:bg-orange-600 hover:text-white transition-colors duration-300"
+                    className="px-4 py-2 rounded-sm text-base font-semibold transition-all duration-300"
+                    style={{ 
+                      backgroundColor: 'white',
+                      color: '#2F5E8F',
+                      border: '2px solid #2F5E8F'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#2F5E8F';
+                      e.target.style.color = 'white';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = 'white';
+                      e.target.style.color = '#2F5E8F';
+                    }}
                   >
                     {cat}
                   </span>
@@ -189,16 +202,29 @@ const AboutUs = () => {
             </div>
 
             {/* Sectors Served */}
-            <div className="bg-gray-50 border-2 border-gray-200 p-8 rounded-sm">
-              <h3 className="text-2xl font-black text-gray-900 mb-8 tracking-tight flex items-center">
-                <span className="bg-orange-600 text-white p-3 rounded-sm mr-4 text-xl">🏭</span>
+            <div className="p-8 rounded-sm" style={{ backgroundColor: '#F3F4F6', border: '2px solid #E5E7EB' }}>
+              <h3 className="text-2xl font-black mb-8 tracking-tight flex items-center" style={{ color: '#1F2933' }}>
+                <span className="text-white p-3 rounded-sm mr-4 text-xl" style={{ backgroundColor: '#2F5E8F' }}>🏭</span>
                 SECTORS WE SERVE
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {servedSectors.map((sector, idx) => (
                   <span 
                     key={idx} 
-                    className="text-gray-800 bg-white px-3 py-2 rounded-sm text-sm font-semibold text-center border-2 border-gray-300 hover:border-orange-600 hover:bg-orange-50 transition-colors duration-300"
+                    className="px-3 py-2 rounded-sm text-sm font-semibold text-center transition-all duration-300"
+                    style={{
+                      backgroundColor: 'white',
+                      color: '#1F2933',
+                      border: '2px solid #E5E7EB'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.borderColor = '#2F5E8F';
+                      e.target.style.backgroundColor = '#F0F4F8';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.borderColor = '#E5E7EB';
+                      e.target.style.backgroundColor = 'white';
+                    }}
                   >
                     {sector}
                   </span>
@@ -208,31 +234,31 @@ const AboutUs = () => {
           </div>
 
           {/* Training Details - Full Width */}
-          <div className="bg-gray-900 text-white p-12 rounded-sm mb-0">
-            <h3 className="text-3xl font-black mb-8 tracking-tight flex items-center">
-              <span className="bg-orange-600 p-3 rounded-sm mr-4">📘</span>
+          <div className="p-12 rounded-sm" style={{ backgroundColor: '#1F2933' }}>
+            <h3 className="text-3xl font-black mb-8 tracking-tight flex items-center text-white">
+              <span className="p-3 rounded-sm mr-4" style={{ backgroundColor: '#2F5E8F' }}>📘</span>
               COMPREHENSIVE TRAINING OFFERINGS
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <ul className="space-y-4">
                 {trainingHighlights.slice(0, 3).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <span className="text-orange-600 font-bold text-xl mt-1">✓</span>
-                    <span className="text-gray-300 text-lg leading-relaxed">{item}</span>
+                    <span className="font-bold text-xl mt-1" style={{ color: '#7FB7B1' }}>✓</span>
+                    <span className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>{item}</span>
                   </li>
                 ))}
               </ul>
               <ul className="space-y-4">
                 {trainingHighlights.slice(3).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <span className="text-orange-600 font-bold text-xl mt-1">✓</span>
-                    <span className="text-gray-300 text-lg leading-relaxed">{item}</span>
+                    <span className="font-bold text-xl mt-1" style={{ color: '#7FB7B1' }}>✓</span>
+                    <span className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="border-t-2 border-gray-700 mt-8 pt-8">
-              <p className="text-gray-400 text-lg">
+            <div className="border-t-2 mt-8 pt-8" style={{ borderColor: '#374151' }}>
+              <p className="text-lg" style={{ color: '#9CA3AF' }}>
                 Industrial Metrology Centre – Committed to excellence in calibration since 2012.
               </p>
             </div>
