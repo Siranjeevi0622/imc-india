@@ -1,7 +1,7 @@
 // components/Footer.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, ChevronRight, FlaskConical, Facebook, Instagram, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail, ChevronRight, FlaskConical, Facebook, Instagram, Twitter, X, InstagramIcon } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -19,12 +19,12 @@ const Footer = () => {
     },
     { 
       name: 'Instagram', 
-      icon: Instagram,
+      icon: InstagramIcon,
       url: 'https://www.instagram.com/imcindia'
     },
     { 
       name: 'Twitter', 
-      icon: Twitter,
+      icon: X,
       url: 'https://www.twitter.com/imcindia'
     },
   ];
