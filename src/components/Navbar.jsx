@@ -11,9 +11,8 @@ export default function Navbar() {
     { name: 'About Us', path: '/about' },
     { name: 'Calibration Services', path: '/calibration' },
     { name: 'Accreditation', path: '/accreditation' },
-    { name: 'Enquiry', path: '/enquiry' },
     { name: 'Feedback', path: '/feedback' },
-    { name: 'Contact Us', path: '/contact' }
+
   ];
 
   const toggleMenu = () => {
@@ -44,7 +43,7 @@ export default function Navbar() {
 
             {/* Desktop Navigation Links - lg screens and above */}
             <ul className="hidden lg:flex items-center gap-1">
-              {navLinks.slice(0, -1).map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
@@ -62,13 +61,13 @@ export default function Navbar() {
               ))}
             </ul>
 
-            {/* Contact Us Button - Desktop */}
+            {/* Enquiry Button - Desktop */}
             <Link
-              to="/contact"
+              to="/enquiry"
               className="hidden lg:flex items-center px-6 py-2 font-semibold text-sm text-white rounded-lg transition-all duration-300 hover:opacity-90 hover:shadow-lg"
               style={{ backgroundColor: '#FF6B35' }}
             >
-              Contact Us
+              Enquiry
             </Link>
 
             {/* Mobile Menu Button - hidden on lg screens */}

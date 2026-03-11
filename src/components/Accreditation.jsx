@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ArrowRight, Download, ExternalLink, CheckCircle2 } from 'lucide-react';
+import Banner from './Banner';
 import CertificateImg from '../assets/imc-certificate-img.png';
 import CertificatePDF from '../assets/imc-certificate.pdf';
 
@@ -21,13 +22,22 @@ const Accreditation = () => {
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'white' }}>
+      {/* Banner with Overlay */}
+      <div className="relative">
+        {/* Overlay for readability - EDIT OPACITY HERE: Change 0.5 to your desired value (0-1) */}
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}></div>
+        
+        <Banner 
+          type="accreditation"
+          title="ACCREDITATION"
+          // subtitle="ISO/IEC 17025:2005 NABL Accredited Calibration Laboratory"
+        />
+      </div>
+
       {/* Accreditation Info */}
       <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b-2" style={{ borderColor: '#E5E7EB' }}>
         <div className="max-w-7xl mx-auto">
           <div className="mb-16" data-aos="fade-down">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight" style={{ color: '#1F2933' }}>
-              <span style={{ color: '#2F5E8F' }}>ACCREDITATION</span>
-            </h1>
             <p className="text-lg md:text-xl font-light leading-relaxed max-w-3xl" style={{ color: '#3F78A8' }}>
               M/s. Industrial Metrology Centre is Now Accredited as per ISO/IEC 17025:2005 by National Accreditation 
               Board for Testing and Calibration Laboratories (NABL) under the aegis of Department of Science & 
@@ -213,7 +223,6 @@ const Accreditation = () => {
         </div>
       </section>
 
-    
     </main>
   );
 };

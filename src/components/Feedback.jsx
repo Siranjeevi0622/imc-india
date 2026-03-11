@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Send, CheckCircle } from 'lucide-react';
+import Banner from '../components/Banner';
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
@@ -81,6 +82,15 @@ const Feedback = () => {
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#F3F4F6' }}>
+
+      {/* Banner */}
+      <Banner
+        type="feedback"
+        title="FEEDBACK"
+        // subtitle="Your opinion helps us improve our services and customer experience."
+        // badge="SHARE YOUR THOUGHTS"
+      />
+
       {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-3 gap-12">
