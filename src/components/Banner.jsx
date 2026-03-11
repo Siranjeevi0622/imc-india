@@ -1,5 +1,8 @@
 import React from 'react';
-import Factory_img from '../assets/factory_img.jpg';
+import Home_img from '../assets/factory_img.jpg';
+import Calib_img from '../assets/calib.jpeg'
+import About_img from '../assets/about.jpeg'
+import Accreditation_img  from '../assets/accreditation.jpeg'
 
 const Banner = ({ 
   title, 
@@ -10,14 +13,12 @@ const Banner = ({
   // Store all banner images for different pages
   // Add your custom images here - just import and replace
   const bannerImages = {
-    default: Factory_img,           // Home page
-    home: Factory_img,               // Home page
-    aboutus: Factory_img,            // About Us page - REPLACE with your about image
-    calibration: Factory_img,        // Calibration Services page - REPLACE with your calibration image
-    accreditation: Factory_img,      // Accreditation page - REPLACE with your accreditation image
-    contact: Factory_img,            // Contact page
-    enquiry: Factory_img,            // Enquiry page
-    feedback: Factory_img,           // Feedback page
+    default: Home_img,           // Home page
+    home: Home_img,               // Home page
+    aboutus: About_img,            // About Us page - REPLACE with your about image
+    calibration: Calib_img,          // Calibration Services page - REPLACE with your calibration image
+    accreditation: Accreditation_img,      // Accreditation page - REPLACE with your accreditation image           // Contact page
+    feedback: Home_img,           // Feedback page
   };
 
   // Get the image based on type, fallback to default
