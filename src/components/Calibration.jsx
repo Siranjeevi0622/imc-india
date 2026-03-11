@@ -41,7 +41,7 @@ const CalibrationServices = () => {
       category: 'Temperature Calibration',
       categoryId: 'temperature',
       items: [
-        { name: 'Temperature Controller / Indicator', image: temp1 },
+        { name: 'Temperature Controller / Indicator', image:temp1 },
         { name: 'Temperature Sensor (RTD, Thermocouple)', image: temp2 },
         { name: 'Temperature Transmitter', image: temp3 },
         { name: 'Temperature Calibrator (liquid & dry block)', image: temp4 },
