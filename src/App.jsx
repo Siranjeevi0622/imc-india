@@ -24,7 +24,6 @@ function App() {
         <Route path="/accreditation" element={<Accreditation/>} />
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/feedback" element={<Feedback />} />
-        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer/>
     </>

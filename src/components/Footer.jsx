@@ -58,7 +58,7 @@ const Footer = () => {
                   <Link 
                     to={link.path} 
                     className="flex items-center group"
-                    style={{ color: '#7FB7B1' }}
+                    style={{ color: '#cbd5e1' }}
                   >
                     <ChevronRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" style={{ color: '#2F5E8F' }} />
                     <span className="group-hover:text-white transition-colors">{link.name}</span>

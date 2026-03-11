@@ -1,5 +1,5 @@
 import React from "react";
-import Factory_img from '../assets/factory_img.jpg';
+import Banner from './Banner';
 
 const AboutUs = () => {
   // Services data arrays for cleaner mapping
@@ -53,20 +53,16 @@ const AboutUs = () => {
   return (
     <>
       <div className="min-h-screen" style={{ backgroundColor: 'white' }}>
-        {/* Header Section with Background Image */}
-        <div className="border-b-2 py-6 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB', backgroundImage: `url(${Factory_img})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
-          {/* Overlay for readability */}
+        {/* Banner with Overlay - Overlay is in this component for easy editing */}
+        <div className="relative">
+          {/* Overlay for readability - EDIT OPACITY HERE: Change 0.5 to your desired value (0-1) */}
           <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}></div>
           
-          <div className="max-w-7xl mx-auto text-center relative z-10">
-            <div className="inline-block text-white text-sm font-bold px-6 py-2 rounded-sm mb-6 tracking-wide" style={{ backgroundColor: '#2F5E8F' }}>
-              ESTABLISHED 2012
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight" style={{ color: 'white' }}>
-              INDUSTRIAL<br/>METROLOGY<br/>CENTRE
-            </h1>
-            <div className="w-20 h-1 mx-auto mb-8" style={{ backgroundColor: '#2F5E8F' }}></div>
-          </div>
+          <Banner 
+            type="aboutus"
+            // badge="ESTABLISHED 2012"
+            title="INDUSTRIAL METROLOGY CENTRE"
+          />
         </div>
 
         {/* Main Content Container */}

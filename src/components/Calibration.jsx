@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Filter, ArrowRight, Check, X } from 'lucide-react';
+import Banner from './Banner';
 import temp1 from '../assets/temp-1.jpeg'
 import temp2 from '../assets/temp-2.jpeg'
 import temp3 from '../assets/temp-3.jpeg'
@@ -141,28 +142,17 @@ const CalibrationServices = () => {
     return colorMap[color] || '#F3F4F6';
   };
 
-  // const getLightBorder = (color) => {
-  //   const colorMap = {
-  //     '#2F5E8F': '#E0E9F5',
-  //     '#3F78A8': '#E0EFFF',
-  //     '#7FB7B1': '#E0F2ED',
-  //   };
-  //   return colorMap[color] || '#E5E7EB';
-  // };
-
   return (
     <div style={{ backgroundColor: '#F3F4F6' }}>
-      {/* Header Section */}
-      <div style={{ backgroundColor: 'white', borderBottom: '1px solid #E5E7EB' }} className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight" style={{ color: '#1F2933' }}>
-            CALIBRATION<br />SERVICES
-          </h1>
-          <div className="w-24 h-1.5 mx-auto mb-8 rounded-full" style={{ background: 'linear-gradient(90deg, #2F5E8F, #7FB7B1)' }}></div>
-          {/* <p className="text-xl max-w-3xl mx-auto font-light leading-relaxed" style={{ color: '#3F78A8' }}>
-            Discover our comprehensive range of precision calibration services designed for industrial excellence.
-          </p> */}
-        </div>
+      {/* Banner with Overlay - Overlay is in this component for easy editing */}
+      <div className="relative">
+        {/* Overlay for readability - EDIT OPACITY HERE: Change 0.5 to your desired value (0-1) */}
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}></div>
+        
+        <Banner 
+          type="calibration"
+          title="CALIBRATION SERVICES"
+        />
       </div>
 
       {/* Main Content - Two Column Layout */}
@@ -325,9 +315,6 @@ const CalibrationServices = () => {
                           <span className="text-xs font-medium leading-snug" style={{ color: '#1F2933' }}>Expert Support</span>
                         </div>
                       </div>
-
-                      {/* CTA Button */}
-                     
                     </div>
 
                     {/* Top Accent Border */}
