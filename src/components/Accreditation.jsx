@@ -254,6 +254,153 @@ const Accreditation = () => {
         </div>
       </section>
 
+
+      {/* ── CTS Section ── */}
+      <section
+        className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-t-2"
+        style={{ backgroundColor: 'white', borderColor: '#E5E7EB' }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div
+            className="rounded-lg p-6 sm:p-10 border-2"
+            style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB' }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+              {/* Left: Text Content */}
+              <div data-aos="fade-right">
+                <p
+                  className="font-bold uppercase tracking-widest mb-2 sm:mb-3"
+                  style={{ color: '#2F5E8F', fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)' }}
+                >
+                  NABL Accredited Laboratory
+                </p>
+                <h2
+                  className="font-black mb-3 sm:mb-4 tracking-tight leading-tight"
+                  style={{ color: '#1F2933', fontSize: 'clamp(1.4rem, 4vw, 2.8rem)' }}
+                >
+                  CALIBRATE WITH A<br />
+                  <span style={{ color: '#2F5E8F' }}>CERTIFIED PARTNER</span>
+                </h2>
+                <p
+                  className="font-light leading-relaxed mb-6 sm:mb-8"
+                  style={{ color: '#111827', fontSize: 'clamp(0.875rem, 2vw, 1rem)' }}
+                >
+                  IMC is accredited by NABL under the Department of Science & Technology,
+                  Government of India — ensuring every calibration meets the highest
+                  international standards across Electro Technical, Mechanical & Thermal disciplines.
+                </p>
+
+                {/* Stats row */}
+                <div className="flex flex-wrap gap-6 sm:gap-10">
+                  {[
+                    { value: 'NABL', label: 'Accredited' },
+                    { value: '3', label: 'Accreditation Scopes' },
+                    { value: 'GOI', label: 'Dept. of Science & Technology' },
+                  ].map((stat, i) => (
+                    <div
+                      key={i}
+                      className="border-l-4 pl-4"
+                      style={{ borderColor: '#2F5E8F' }}
+                      data-aos="fade-up"
+                      data-aos-delay={i * 100}
+                    >
+                      <p
+                        className="font-black leading-none"
+                        style={{ color: '#2F5E8F', fontSize: 'clamp(1.3rem, 3.5vw, 2rem)' }}
+                      >
+                        {stat.value}
+                      </p>
+                      <p
+                        className="font-semibold mt-1"
+                        style={{ color: '#1F2933', fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)' }}
+                      >
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right: Action Card */}
+              <div data-aos="fade-left">
+                <div
+                  className="rounded-lg p-5 sm:p-7 shadow-md border-t-4"
+                  style={{ backgroundColor: 'white', borderColor: '#2F5E8F' }}
+                >
+                  <h3
+                    className="font-black mb-1 tracking-tight"
+                    style={{ color: '#1F2933', fontSize: 'clamp(1rem, 2.5vw, 1.4rem)' }}
+                  >
+                    REQUEST ACCREDITED CALIBRATION
+                  </h3>
+                  <p
+                    className="font-light mb-4 sm:mb-5"
+                    style={{ color: '#111827', fontSize: 'clamp(0.8rem, 1.8vw, 1rem)' }}
+                  >
+                    Get NABL-accredited calibration certificates recognized across India
+                    and internationally.
+                  </p>
+
+                  {/* Feature list */}
+                  <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    {[
+                      'NABL accredited — recognized by Govt. of India',
+                      'Covers Electro Technical, Mechanical & Thermal',
+                      'Traceable to National Physical Laboratory (India)',
+                      'Certificates valid for regulatory & audit compliance',
+                    ].map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 text-xs sm:text-sm font-medium"
+                        style={{ color: '#1F2933' }}
+                      >
+                        <span
+                          className="font-bold text-base leading-none mt-0.5 shrink-0"
+                          style={{ color: '#2F5E8F' }}
+                        >
+                          ●
+                        </span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link
+                      to="/enquiry"
+                      className="w-full sm:w-auto flex-1 px-6 py-3 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:opacity-90 hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm sm:text-base"
+                      style={{ backgroundColor: '#2F5E8F' }}
+                    >
+                      ENQUIRE NOW
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </Link>
+                    <Link
+                      to="/calibration"
+                      className="w-full sm:w-auto flex-1 px-6 py-3 border-2 font-bold rounded-lg transition-all duration-300 text-sm sm:text-base text-center inline-flex items-center justify-center"
+                      style={{ borderColor: '#2F5E8F', color: '#2F5E8F' }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#2F5E8F';
+                        e.currentTarget.style.color = 'white';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = '#2F5E8F';
+                      }}
+                    >
+                      OUR SERVICES
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ── End CTS Section ── */}
+
     </main>
   );
 };

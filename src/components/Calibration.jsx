@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Filter, ArrowRight, Check, X } from 'lucide-react';
 import Banner from './Banner';
 import temp1 from '../assets/temp-1.jpeg'
@@ -384,6 +385,146 @@ const CalibrationServices = () => {
           </div>
         </div>
       </div>
+      {/* ── CTS Section ── */}
+      <div className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F3F4F6' }}>
+        <div className="max-w-7xl mx-auto">
+          <div
+            className="rounded-2xl p-6 sm:p-10 border"
+            style={{ backgroundColor: 'white', borderColor: '#E5E7EB' }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+              {/* Left: Text Content */}
+              <div>
+                <p
+                  className="font-bold uppercase tracking-widest mb-2 sm:mb-3"
+                  style={{ color: '#2F5E8F', fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)' }}
+                >
+                  Need a Calibration Service?
+                </p>
+                <h2
+                  className="font-black mb-3 sm:mb-4 tracking-tight leading-tight"
+                  style={{ color: '#1F2933', fontSize: 'clamp(1.4rem, 4vw, 2.8rem)' }}
+                >
+                  NOT SURE WHICH<br />
+                  <span style={{ color: '#2F5E8F' }}>SERVICE YOU NEED?</span>
+                </h2>
+                <p
+                  className="font-light leading-relaxed mb-6 sm:mb-8"
+                  style={{ color: '#111827', fontSize: 'clamp(0.875rem, 2vw, 1rem)' }}
+                >
+                  Our calibration experts will assess your instruments and recommend
+                  the right service — whether it's temperature, pressure, dimensional,
+                  mass, or NDT calibration.
+                </p>
+
+                {/* Stats row */}
+                <div className="flex flex-wrap gap-6 sm:gap-10">
+                  {[
+                    { value: `${allItems.length}+`, label: 'Equipment Types' },
+                    { value: '5+', label: 'Service Categories' },
+                    { value: 'NPL', label: 'Traceable Standards' },
+                  ].map((stat, i) => (
+                    <div
+                      key={i}
+                      className="border-l-4 pl-4"
+                      style={{ borderColor: '#2F5E8F' }}
+                    >
+                      <p
+                        className="font-black leading-none"
+                        style={{ color: '#2F5E8F', fontSize: 'clamp(1.3rem, 3.5vw, 2rem)' }}
+                      >
+                        {stat.value}
+                      </p>
+                      <p
+                        className="font-semibold mt-1"
+                        style={{ color: '#1F2933', fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)' }}
+                      >
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right: Action Card */}
+              <div>
+                <div
+                  className="rounded-2xl p-5 sm:p-7 border-t-4"
+                  style={{ backgroundColor: '#F3F4F6', borderColor: '#2F5E8F' }}
+                >
+                  <h3
+                    className="font-black mb-1 tracking-tight"
+                    style={{ color: '#1F2933', fontSize: 'clamp(1rem, 2.5vw, 1.4rem)' }}
+                  >
+                    BOOK A CALIBRATION
+                  </h3>
+                  <p
+                    className="font-light mb-4 sm:mb-5"
+                    style={{ color: '#111827', fontSize: 'clamp(0.8rem, 1.8vw, 1rem)' }}
+                  >
+                    Send us your instrument details and we'll arrange a calibration at
+                    your site or our laboratory.
+                  </p>
+
+                  {/* Feature list */}
+                  <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    {[
+                      'On-site & laboratory calibration available',
+                      'ISO/IEC 17025:2005 certified procedures',
+                      'Detailed calibration certificates issued',
+                      'Quick turnaround for emergency requirements',
+                    ].map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 text-xs sm:text-sm font-medium"
+                        style={{ color: '#1F2933' }}
+                      >
+                        <span
+                          className="font-bold text-base leading-none mt-0.5 shrink-0"
+                          style={{ color: '#2F5E8F' }}
+                        >
+                          ●
+                        </span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link
+                      to="/enquiry"
+                      className="w-full sm:w-auto flex-1 px-6 py-3 text-white font-bold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm sm:text-base"
+                      style={{ backgroundColor: '#2F5E8F' }}
+                    >
+                      ENQUIRE NOW
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </Link>
+                    <Link
+                      to="/feedback"
+                      className="w-full sm:w-auto flex-1 px-6 py-3 border-2 font-bold rounded-xl transition-all duration-300 text-sm sm:text-base text-center inline-flex items-center justify-center"
+                      style={{ borderColor: '#2F5E8F', color: '#2F5E8F' }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#2F5E8F';
+                        e.currentTarget.style.color = 'white';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = '#2F5E8F';
+                      }}
+                    >
+                      FEEDBACK
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ── End CTS Section ── */}
     </div>
   );
 };

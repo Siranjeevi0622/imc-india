@@ -59,7 +59,6 @@ const Home = () => {
 
       {/* ── Hero Section ── */}
       <section className="relative w-full" style={{ minHeight: 'clamp(320px, 55vw, 600px)' }}>
-        {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -67,8 +66,6 @@ const Home = () => {
             backgroundAttachment: 'fixed',
           }}
         />
-
-        {/* Grid overlay */}
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -77,8 +74,6 @@ const Home = () => {
             backgroundSize: '40px 40px',
           }}
         />
-
-        {/* Content */}
         <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
           <div className="text-center max-w-4xl w-full" data-aos="fade-up">
             <h1
@@ -94,7 +89,6 @@ const Home = () => {
             >
               Trusted calibration services for industrial excellence across multiple sectors
             </p>
-            {/* Buttons: stack on mobile, row from sm+ */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <Link
                 to="/calibration"
@@ -122,8 +116,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        {/* Accent line */}
         <div
           className="absolute bottom-0 left-0 right-0 h-1"
           style={{ backgroundImage: 'linear-gradient(90deg,transparent,#7FB7B1,transparent)' }}
@@ -136,20 +128,7 @@ const Home = () => {
         style={{ backgroundColor: 'white', borderColor: '#E5E7EB' }}
       >
         <div className="max-w-7xl mx-auto">
-          <h1
-            className="font-black mb-8 sm:mb-16 tracking-tight leading-tight"
-            data-aos="fade-down"
-            style={{ color: '#1F2933', fontSize: 'clamp(2rem, 6vw, 4.5rem)' }}
-          >
-            INDUSTRIAL<br />
-            <span style={{ color: '#2F5E8F' }}>METROLOGY</span><br />
-            CENTRE
-          </h1>
-
-          {/* Stack on mobile, 3-col on lg */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 items-center">
-
-            {/* Image */}
             <div data-aos="fade-right" className="lg:col-span-1">
               <div className="overflow-hidden rounded-lg shadow-lg">
                 <img
@@ -160,12 +139,10 @@ const Home = () => {
                 />
               </div>
             </div>
-
-            {/* Text */}
             <div data-aos="fade-left" className="lg:col-span-2 space-y-4 sm:space-y-8">
               <p
                 className="leading-relaxed text-justify font-light"
-                style={{ color: '#3F78A8', fontSize: 'clamp(0.9rem, 2vw, 1.25rem)' }}
+                style={{ color: '#000000', fontSize: 'clamp(0.9rem, 2vw, 1.25rem)' }}
               >
                 <span
                   className="font-bold block mb-2 sm:mb-4"
@@ -173,14 +150,13 @@ const Home = () => {
                 >
                   Industrial Metrology Centre (IMC)
                 </span>
-                provides the calibration requirements of various kinds of organizations. The
+                Provides the calibration requirements of various kinds of organizations. The
                 Laboratory is equipped with elite Calibration equipments both Primary and
                 Working / Transfer standards. The Calibration uncertainty of these Master
                 Equipments is traceable to National Physical Laboratory (India) & other National
                 recognized accredited laboratories. IMC is maintaining quality management system
                 as per ISO/IEC 17025:2005.
               </p>
-
               <Link
                 to="/about"
                 className="inline-flex items-center gap-2 sm:gap-3 text-white px-5 sm:px-8 py-3 sm:py-4 rounded-sm transition-opacity duration-300 font-bold tracking-wide hover:opacity-90 text-sm sm:text-base"
@@ -207,21 +183,15 @@ const Home = () => {
           >
             OUR <span style={{ color: '#2F5E8F' }}>SECTORS</span>
           </h2>
-
           <p
             className="font-semibold mb-8 sm:mb-16"
             data-aos="fade-up"
-            style={{ color: '#3F78A8', fontSize: 'clamp(0.875rem, 2vw, 1.25rem)' }}
+            style={{ color: '#000000', fontSize: 'clamp(0.875rem, 2vw, 1.25rem)' }}
           >
             IMC provide Calibration services to the following sectors
           </p>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 items-start">
-
-            {/* Sectors List */}
             <div data-aos="fade-right" className="lg:col-span-1">
-
-              {/* Mobile: wrap chips */}
               <div className="flex flex-wrap gap-2 lg:hidden mb-2">
                 {sectors.map((sector, index) => {
                   const IconComponent = sector.icon;
@@ -239,8 +209,6 @@ const Home = () => {
                   );
                 })}
               </div>
-
-              {/* Desktop: vertical list */}
               <ul className="hidden lg:block space-y-0 border-l-4" style={{ borderColor: '#2F5E8F' }}>
                 {sectors.map((sector, index) => {
                   const IconComponent = sector.icon;
@@ -257,7 +225,7 @@ const Home = () => {
                       </div>
                       <span
                         className="font-semibold text-lg transition-colors group-hover:opacity-70"
-                        style={{ color: '#3F78A8' }}
+                        style={{ color: '#000000' }}
                       >
                         {sector.name}
                       </span>
@@ -266,8 +234,6 @@ const Home = () => {
                 })}
               </ul>
             </div>
-
-            {/* Calibration Services Cards */}
             <div data-aos="fade-left" className="lg:col-span-2">
               <h3
                 className="font-black mb-5 sm:mb-8 tracking-tight leading-tight"
@@ -275,8 +241,6 @@ const Home = () => {
               >
                 CALIBRATION SERVICES
               </h3>
-
-              {/* 1 col on mobile, 2 col from sm+ */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
                 {calibrationServices.map((service, index) => (
                   <Link
@@ -296,15 +260,14 @@ const Home = () => {
                       </div>
                       <h4
                         className="font-bold group-hover:opacity-80 transition-opacity text-sm sm:text-base"
-                        style={{ color: '#1F2933' }}
+                        style={{ color: '#000000' }}
                       >
                         {service.title}
                       </h4>
                     </div>
                     <ul className="space-y-1 sm:space-y-2">
                       {service.items.map((item) => (
-                        <li key={item} className="text-xs sm:text-sm flex items-start gap-2 sm:gap-3" style={{ color: '#3F78A8' }}>
-                          <span className="font-bold text-base leading-none mt-0.5 shrink-0" style={{ color: '#7FB7B1' }}>●</span>
+                        <li key={item} className="text-xs sm:text-sm flex items-start gap-2 sm:gap-3" style={{ color: '#000000' }}>
                           <span className="font-medium">{item}</span>
                         </li>
                       ))}
@@ -313,6 +276,145 @@ const Home = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTS (Call to Service) Section ── */}
+      <section
+        className="py-8 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-8"
+        style={{ backgroundColor: '#F3F4F6', position: 'relative', overflow: 'hidden' }}
+      >
+        <div className="relative max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+
+            {/* Left: Text Content */}
+            <div data-aos="fade-right">
+              <p
+                className="font-bold uppercase tracking-widest mb-2 sm:mb-3"
+                style={{ color: '#2F5E8F', fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)' }}
+              >
+                Ready to Work With Us?
+              </p>
+              <h2
+                className="font-black mb-3 sm:mb-4 tracking-tight leading-tight"
+                style={{ color: '#1F2933', fontSize: 'clamp(1.4rem, 4vw, 2.8rem)' }}
+              >
+                GET YOUR INSTRUMENTS<br />
+                <span style={{ color: '#2F5E8F' }}>CALIBRATED TODAY</span>
+              </h2>
+              <p
+                className="font-light leading-relaxed mb-4 sm:mb-6"
+                style={{ color: '#111827', fontSize: 'clamp(0.875rem, 2vw, 1rem)' }}
+              >
+                IMC delivers precise, traceable calibration services backed by ISO/IEC 17025
+                standards. Our experts are ready to support your industry with fast turnaround
+                and reliable results.
+              </p>
+
+              {/* Stats row */}
+              <div className="flex flex-wrap gap-6 sm:gap-10">
+                {[
+                  { value: '500+', label: 'Instruments Calibrated' },
+                  { value: '8+', label: 'Industry Sectors' },
+                  { value: 'ISO', label: '17025 Certified' },
+                ].map((stat, i) => (
+                  <div
+                    key={i}
+                    className="border-l-4 pl-4"
+                    style={{ borderColor: '#2F5E8F' }}
+                    data-aos="fade-up"
+                    data-aos-delay={i * 100}
+                  >
+                    <p
+                      className="font-black leading-none"
+                      style={{ color: '#2F5E8F', fontSize: 'clamp(1.3rem, 3.5vw, 2rem)' }}
+                    >
+                      {stat.value}
+                    </p>
+                    <p
+                      className="font-semibold mt-1"
+                      style={{ color: '#1F2933', fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)' }}
+                    >
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Action Card */}
+            <div data-aos="fade-left">
+              <div
+                className="rounded-lg p-5 sm:p-7 shadow-md border-t-4"
+                style={{ backgroundColor: 'white', borderColor: '#2F5E8F' }}
+              >
+                <h3
+                  className="font-black mb-1 tracking-tight"
+                  style={{ color: '#1F2933', fontSize: 'clamp(1rem, 2.5vw, 1.4rem)' }}
+                >
+                  REQUEST A CALIBRATION
+                </h3>
+                <p
+                  className="font-light mb-4 sm:mb-5"
+                  style={{ color: '#111827', fontSize: 'clamp(0.8rem, 1.8vw, 1rem)' }}
+                >
+                  Tell us what you need — our team will get back to you promptly.
+                </p>
+
+                {/* Feature list */}
+                <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                  {[
+                    'Traceable to National Physical Laboratory (India)',
+                    'ISO/IEC 17025:2005 Quality Management System',
+                    'Primary & Working / Transfer Standards',
+                    'Fast turnaround with detailed calibration reports',
+                  ].map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 text-xs sm:text-sm font-medium"
+                      style={{ color: '#1F2933' }}
+                    >
+                      <span
+                        className="font-bold text-base leading-none mt-0.5 shrink-0"
+                        style={{ color: '#2F5E8F' }}
+                      >
+                        ●
+                      </span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    to="/enquiry"
+                    className="w-full sm:w-auto flex-1 px-6 py-3 text-white font-bold rounded-sm hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm sm:text-base"
+                    style={{ backgroundColor: '#2F5E8F' }}
+                  >
+                    CONTACT US
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </Link>
+                  <Link
+                    to="/calibration"
+                    className="w-full sm:w-auto flex-1 px-6 py-3 border-2 font-bold rounded-sm transition-all duration-300 text-sm sm:text-base text-center inline-flex items-center justify-center"
+                    style={{ borderColor: '#2F5E8F', color: '#2F5E8F' }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#2F5E8F';
+                      e.currentTarget.style.color = 'white';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                      e.currentTarget.style.color = '#2F5E8F';
+                    }}
+                  >
+                    VIEW SERVICES
+                  </Link>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
