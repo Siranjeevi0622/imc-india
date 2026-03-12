@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, ChevronRight, FlaskConical, Facebook, Instagram, Twitter, X, InstagramIcon } from 'lucide-react';
-
+import imc_logo from '../assets/imc-logo.png'
 const Footer = () => {
   const quickLinks = [
     { name: 'About Us', path: '/about' },
@@ -36,12 +36,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="p-2 rounded-xl group-hover:shadow-lg transition-shadow" style={{ backgroundColor: '#2F5E8F' }}>
-                <FlaskConical className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-white font-bold text-lg group-hover:opacity-80 transition-opacity">IMC</span>
-            </Link>
+            <a 
+  href="/" 
+  target="" 
+  rel="noopener noreferrer" 
+  className="flex items-center space-x-2 group"
+>
+  <img src={imc_logo} alt="imc-logo" className='w-auto h-20' />
+</a>
             <p className="text-sm leading-relaxed">
               Setting the standard in industrial metrology with precision, accuracy, and reliability.
             </p>
@@ -73,16 +75,16 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5  mt-0.5" style={{ color: '#2F5E8F' }} />
-                <span className="text-sm">123 Metrology Ave, Industrial Park, City 12345</span>
+                <MapPin className="w-15 h-15  mt-0.5" style={{ color: '#2F5E8F' }} />
+                <span className="text-sm">Industrial Metrology Centre,36,Ist Floor,J.M.Solanki Complex,Ahamed Mohideen Street,Sriperumbudur - 602 105</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 shrink-0" style={{ color: '#2F5E8F' }} />
                 <a 
-                  href="tel:+1234567890" 
+                  href="tel:+91 9498071405" 
                   className="text-sm hover:text-white transition-colors"
                 >
-                  +1 234 567 890
+                 +91 9498071405, +91 9498071401
                 </a>
               </li>
               <li className="flex items-center space-x-3">
