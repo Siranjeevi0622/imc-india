@@ -8,7 +8,7 @@ const Footer = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/calibration' },
     { name: 'Accreditation', path: '/accreditation' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Enquiry', path: '/enquiry' },
   ];
 
   const socialLinks = [
