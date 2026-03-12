@@ -1,8 +1,10 @@
 import React from 'react';
 import Home_img from '../assets/factory_img.jpg';
-import Calib_img from '../assets/calib.jpeg'
-import About_img from '../assets/about.jpeg'
-import Accreditation_img  from '../assets/accreditation.jpeg'
+import Calib_img from '../assets/imc-image1.jpeg'
+import About_img from '../assets/imc-image2.jpeg'
+import Accreditation_img  from '../assets/imc-image3.jpeg'
+import Feedback_img from '../assets/imc-image5.jpg'
+import Enquiry_img from '../assets/imc-image6.jpg'
 
 const Banner = ({ 
   title, 
@@ -16,7 +18,8 @@ const Banner = ({
     aboutus: About_img,
     calibration: Calib_img,
     accreditation: Accreditation_img,
-    feedback: Home_img,
+    feedback:Feedback_img ,
+    enquiry: Enquiry_img,
   };
 
   const backgroundImage = bannerImages[type] || bannerImages.default;

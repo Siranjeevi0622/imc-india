@@ -355,7 +355,7 @@ const CalibrationServices = () => {
             style={{ backgroundColor: '#F0F7FF', border: '1px solid #E0EFFF' }}
           >
             <div className="text-4xl sm:text-5xl font-black mb-2 sm:mb-3" style={{ color: '#3F78A8' }}>
-              5
+              5+
             </div>
             <h3 className="text-base sm:text-lg font-black mb-1 sm:mb-2 tracking-tight" style={{ color: '#1F2933' }}>
               Categories

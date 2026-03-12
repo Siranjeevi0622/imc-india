@@ -109,7 +109,7 @@ const Enquiry = () => {
     <main className="min-h-screen" style={{ backgroundColor: '#F3F4F6' }}>
 
       {/* Banner */}
-      <Banner type="contact" title="Enquiry" />
+      <Banner type="enquiry" title="Enquiry" />
 
       {/* Main Content */}
       <section className="py-8 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">

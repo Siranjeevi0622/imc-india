@@ -34,7 +34,7 @@ export default function Navbar() {
             <img
               src={imc_logo}
               alt="IMC Logo"
-              className="h-25 sm:h-12 w-auto object-contain"
+              className="h-20  w-auto object-contain"
             />
           </Link>
 

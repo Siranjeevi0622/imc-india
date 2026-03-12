@@ -1,6 +1,6 @@
 import React from "react";
 
-const WHATSAPP_NUMBER = "919585447118"; // Replace with your number (country code + number, no +)
+const WHATSAPP_NUMBER = "919498071405"; // Replace with your number (country code + number, no +)
 const WHATSAPP_MESSAGE = "Hello, I'd like to enquire about IMC calibration services.";
 
 const WhatsAppButton = () => {

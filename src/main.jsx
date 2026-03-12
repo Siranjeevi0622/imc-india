@@ -11,7 +11,6 @@ import WhatsAppButton from './components/Whatsappbutton.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />
-    <WhatsAppButton/>
     <ScrollToTop />
     <Clicktotop />
   </BrowserRouter>,
