@@ -108,19 +108,19 @@ const Feedback = () => {
 
               <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                 <div>
-                  <p className="text-xs sm:text-sm font-bold mb-2 sm:mb-3" style={{ color: '#3F78A8' }}>
+                  <p className="text-xs sm:text-sm font-bold mb-2 sm:mb-3" style={{ color: '#000000' }}>
                     WE VALUE YOUR OPINION
                   </p>
-                  <p className="text-xs sm:text-sm leading-relaxed" style={{ color: '#3F78A8' }}>
+                  <p className="text-xs sm:text-sm leading-relaxed" style={{ color: '#000000' }}>
                     Your feedback helps us improve our services, calibration activities, and customer experience.
                   </p>
                 </div>
 
                 <div className="pt-4 sm:pt-6 border-t-2" style={{ borderColor: '#E5E7EB' }}>
-                  <p className="text-xs sm:text-sm font-bold mb-2 sm:mb-3" style={{ color: '#3F78A8' }}>
+                  <p className="text-xs sm:text-sm font-bold mb-2 sm:mb-3" style={{ color: '#000000' }}>
                     CONFIDENTIALITY
                   </p>
-                  <p className="text-xs sm:text-sm leading-relaxed" style={{ color: '#3F78A8' }}>
+                  <p className="text-xs sm:text-sm leading-relaxed" style={{ color: '#000000' }}>
                     No information received will be disclosed to third parties.
                   </p>
                 </div>
@@ -145,80 +145,7 @@ const Feedback = () => {
             <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-8">
 
               {/* Contact Information */}
-              <div className="rounded-2xl p-5 sm:p-8" style={{ backgroundColor: 'white' }}>
-                <h2
-                  className="font-bold mb-4 sm:mb-6"
-                  style={{ color: '#1F2933', fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}
-                >
-                  Contact Information
-                </h2>
-
-                <div className="space-y-3 sm:space-y-4">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Contact Name *"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 focus:outline-none transition-all text-sm"
-                    style={{ borderColor: '#E5E7EB' }}
-                    onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
-                    onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
-                  />
-                  <input
-                    type="text"
-                    name="company"
-                    placeholder="Company *"
-                    value={formData.company}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 focus:outline-none transition-all text-sm"
-                    style={{ borderColor: '#E5E7EB' }}
-                    onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
-                    onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
-                  />
-                  {/* Phone + Fax — stacks on very small screens */}
-                  <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 sm:gap-4">
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="Phone *"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 focus:outline-none transition-all text-sm"
-                      style={{ borderColor: '#E5E7EB' }}
-                      onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
-                      onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
-                    />
-                    <input
-                      type="text"
-                      name="fax"
-                      placeholder="Fax"
-                      value={formData.fax}
-                      onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 focus:outline-none transition-all text-sm"
-                      style={{ borderColor: '#E5E7EB' }}
-                      onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
-                      onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
-                    />
-                  </div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email *"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 focus:outline-none transition-all text-sm"
-                    style={{ borderColor: '#E5E7EB' }}
-                    onFocus={(e) => e.target.style.borderColor = '#2F5E8F'}
-                    onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
-                  />
-                </div>
-              </div>
-
+              
               {/* Ratings Section */}
               <div className="rounded-2xl p-5 sm:p-8" style={{ backgroundColor: 'white' }}>
                 <h2
@@ -231,7 +158,7 @@ const Feedback = () => {
                 <div className="space-y-4 sm:space-y-5">
                   {ratingFields.map((field) => (
                     <div key={field.name}>
-                      <label className="block text-xs sm:text-sm font-bold mb-2 sm:mb-3" style={{ color: '#3F78A8' }}>
+                      <label className="block text-xs sm:text-sm font-bold mb-2 sm:mb-3" style={{ color: '#000000' }}>
                         {field.label}
                       </label>
                       {/* Radio options: 2-col on mobile, wrap naturally on larger */}
