@@ -1,8 +1,9 @@
 import React from 'react';
 import Home_img from '../assets/factory_img.jpg';
-import Calib_img from '../assets/calib.jpeg'
-import About_img from '../assets/about.jpeg'
-import Accreditation_img  from '../assets/accreditation.jpeg'
+import Calib_img from '../assets/imc-image2.jpg'
+import About_img from '../assets/imc-image1.jpg'
+import Accreditation_img from '../assets/imc-image3.jpg'
+import Feedback_img from '../assets/imc-image5.jpg' 
 
 const Banner = ({ 
   title, 
@@ -10,18 +11,15 @@ const Banner = ({
   badge = null, 
   type = 'default'
 }) => {
-  // Store all banner images for different pages
-  // Add your custom images here - just import and replace
   const bannerImages = {
-    default: Home_img,           // Home page
-    home: Home_img,               // Home page
-    aboutus: About_img,            // About Us page - REPLACE with your about image
-    calibration: Calib_img,          // Calibration Services page - REPLACE with your calibration image
-    accreditation: Accreditation_img,      // Accreditation page - REPLACE with your accreditation image           // Contact page
-    feedback: Home_img,           // Feedback page
+    default: Home_img,
+    home: Home_img,
+    aboutus: About_img,
+    calibration: Calib_img,
+    accreditation: Accreditation_img,
+    feedback: Feedback_img,
   };
 
-  // Get the image based on type, fallback to default
   const backgroundImage = bannerImages[type] || bannerImages.default;
 
   return (
@@ -36,6 +34,9 @@ const Banner = ({
         backgroundAttachment: 'fixed' 
       }}
     >
+      {/* Dark overlay - change rgba last value (0.0 to 1.0) to adjust darkness */}
+      <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}></div>
+
       <div className="max-w-7xl mx-auto text-center w-full relative z-10">
         {badge && (
           <div className="inline-block text-white text-sm font-bold px-6 py-2 rounded-sm mb-6 tracking-wide" style={{ backgroundColor: '#2F5E8F' }}>

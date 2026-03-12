@@ -259,41 +259,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 mb-0" style={{ backgroundColor: '#1F2933' }}>
-        <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-          <h3 className="text-5xl md:text-6xl font-black mb-8 tracking-tight text-white">
-            NEED CALIBRATION<br />SERVICES?
-          </h3>
-          <p className="text-xl mb-12 font-light leading-relaxed" style={{ color: '#E5E7EB' }}>
-            Contact us today to learn how IMC can help your organization maintain precision and accuracy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              to="/enquiry"
-              className="px-10 py-4 text-white font-bold rounded-sm transition-opacity duration-300 text-lg tracking-wide hover:opacity-90"
-              style={{ backgroundColor: '#2F5E8F' }}
-            >
-              SEND ENQUIRY
-            </Link>
-            <Link
-              to="/contact"
-              className="px-10 py-4 border-2 text-white font-bold rounded-sm transition-all duration-300 text-lg tracking-wide hover:text-gray-900"
-              style={{ borderColor: 'white', color: 'white' }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = 'white';
-                e.target.style.color = '#2F5E8F';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = 'transparent';
-                e.target.style.color = 'white';
-              }}
-            >
-              CONTACT US
-            </Link>
-          </div>
-        </div>
-      </section> */}
+      
     </main>
   );
 };

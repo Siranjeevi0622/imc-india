@@ -56,13 +56,17 @@ const AboutUs = () => {
         {/* Banner with Overlay - Overlay is in this component for easy editing */}
         <div className="relative">
           {/* Overlay for readability - EDIT OPACITY HERE: Change 0.5 to your desired value (0-1) */}
-          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}></div>
-          
-          <Banner 
+          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+            
+
+          </div>
+           <Banner 
             type="aboutus"
             // badge="ESTABLISHED 2012"
             title="INDUSTRIAL METROLOGY CENTRE"
           />
+          
+         
         </div>
 
         {/* Main Content Container */}
