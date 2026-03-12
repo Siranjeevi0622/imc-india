@@ -42,7 +42,7 @@ const Footer = () => {
   rel="noopener noreferrer" 
   className="flex items-center space-x-2 group"
 >
-  <img src={imc_logo} alt="imc-logo" className='w-auto h-20' />
+  <img src={imc_logo} alt="imc-logo" className='w-auto h-10' />
 </a>
             <p className="text-sm leading-relaxed">
               Setting the standard in industrial metrology with precision, accuracy, and reliability.
