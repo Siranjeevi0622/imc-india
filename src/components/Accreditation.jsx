@@ -39,7 +39,7 @@ const Accreditation = () => {
           <div className="mb-8 sm:mb-16" data-aos="fade-down">
             <p
               className="font-light leading-relaxed max-w-3xl"
-              style={{ color: '#3F78A8', fontSize: 'clamp(0.95rem, 2vw, 1.25rem)' }}
+              style={{ color: '#000000', fontSize: 'clamp(0.95rem, 2vw, 1.25rem)' }}
             >
               M/s. Industrial Metrology Centre is Now Accredited as per ISO/IEC 17025:2005 by National Accreditation
               Board for Testing and Calibration Laboratories (NABL) under the aegis of Department of Science &
@@ -86,7 +86,7 @@ const Accreditation = () => {
                     {item.title}
                   </h3>
                 </div>
-                <p className="font-light text-sm sm:text-base" style={{ color: '#3F78A8' }}>
+                <p className="font-light text-sm sm:text-xl" style={{ color: '#000000' }}>
                   {item.description}
                 </p>
               </div>
@@ -113,7 +113,7 @@ const Accreditation = () => {
           <p
             className="text-center font-light mb-10 sm:mb-16 max-w-2xl mx-auto text-sm sm:text-lg"
             data-aos="fade-up"
-            style={{ color: '#3F78A8' }}
+            style={{ color: '#000000' }}
           >
             Certificate of Accreditation for Electro Technical, Mechanical & Thermal Calibration Services
           </p>
@@ -144,8 +144,7 @@ const Accreditation = () => {
                 className="font-black mb-6 sm:mb-8 tracking-tight"
                 style={{ color: '#1F2933', fontSize: 'clamp(1.3rem, 3vw, 1.875rem)' }}
               >
-                Certificate<br />
-                <span style={{ color: '#2F5E8F' }}>Details</span>
+                Certificate <span style={{ color: '#2F5E8F' }}>Details</span>
               </h3>
 
               <div className="space-y-4 sm:space-y-6">
@@ -174,7 +173,7 @@ const Accreditation = () => {
                     >
                       {detail.title}
                     </h4>
-                    <p className="font-light text-sm sm:text-base" style={{ color: '#3F78A8' }}>
+                    <p className="font-light text-sm sm:text-xl" style={{ color: '#000000' }}>
                       {detail.desc}
                     </p>
                   </div>
@@ -244,7 +243,7 @@ const Accreditation = () => {
                   {section.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <span className="font-bold text-base sm:text-lg shrink-0" style={{ color: '#2F5E8F' }}>●</span>
-                      <span className="font-light text-sm sm:text-base" style={{ color: '#3F78A8' }}>{item}</span>
+                      <span className="font-light text-sm sm:text-xl" style={{ color: '#000000' }}>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -284,7 +283,7 @@ const Accreditation = () => {
                 </h2>
                 <p
                   className="font-light leading-relaxed mb-6 sm:mb-8"
-                  style={{ color: '#111827', fontSize: 'clamp(0.875rem, 2vw, 1rem)' }}
+                  style={{ color: '#111827', fontSize: 'text-xl sm:text-sm' }}
                 >
                   IMC is accredited by NABL under the Department of Science & Technology,
                   Government of India — ensuring every calibration meets the highest

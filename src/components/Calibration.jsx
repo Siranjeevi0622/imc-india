@@ -162,7 +162,7 @@ const CalibrationServices = () => {
               style={{ backgroundColor: 'white', borderColor: '#E5E7EB' }}
             >
               {/* Filter Header */}
-              <div className="flex items-center gap-3 mb-6 sm:mb-8">
+              {/* <div className="flex items-center gap-3 mb-6 sm:mb-8">
                 <div className="p-2 sm:p-3 rounded-xl" style={{ backgroundColor: '#F0F4F8' }}>
                   <Filter className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#2F5E8F' }} />
                 </div>
@@ -170,7 +170,7 @@ const CalibrationServices = () => {
                   <h3 className="text-base sm:text-lg font-black" style={{ color: '#1F2933' }}>CATEGORIES</h3>
                   <p className="text-xs font-medium" style={{ color: '#9CA3AF' }}>{filteredItems.length} items</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* All Services Button */}
               <button
@@ -220,7 +220,7 @@ const CalibrationServices = () => {
               </div>
 
               {/* Stats Card */}
-              <div
+              {/* <div
                 className="mt-6 sm:mt-8 p-4 sm:p-5 rounded-xl border"
                 style={{ backgroundColor: '#F0F4F8', borderColor: '#E0E9F5' }}
               >
@@ -229,7 +229,7 @@ const CalibrationServices = () => {
                 </div>
                 <p className="text-sm font-semibold" style={{ color: '#1F2933' }}>Available Items</p>
                 <p className="text-xs mt-1" style={{ color: '#6B7280' }}>in this category</p>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -280,13 +280,13 @@ const CalibrationServices = () => {
                   <div className="p-3 sm:p-6 flex flex-col grow">
                     {/* Category Tag */}
                     <div className="mb-2 sm:mb-4 inline-flex items-center gap-1.5 sm:gap-2 w-fit">
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style={{ backgroundColor: item.color }}></div>
+                      {/* <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style={{ backgroundColor: item.color }}></div>
                       <span
                         className="font-black uppercase tracking-widest"
                         style={{ color: item.color, fontSize: 'clamp(0.6rem, 1.2vw, 0.75rem)' }}
                       >
                         {item.categoryId}
-                      </span>
+                      </span> */}
                     </div>
 
                     {/* Title */}

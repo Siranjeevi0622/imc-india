@@ -33,7 +33,7 @@ export default function Navbar() {
             {/* Logo Section */}
             <Link
               to="/"
-              className="flex items-center gap-3 group transition-opacity duration-300 hover:opacity-80 flex-shrink-0"
+              className="flex items-center gap-3 group transition-opacity duration-300 hover:opacity-80 shrink-0"
             >
               <img
                 src={imc_logo}
@@ -74,7 +74,7 @@ export default function Navbar() {
             {/* Mobile Menu Button - hidden on lg screens */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 rounded-sm transition-colors duration-300 flex-shrink-0"
+              className="lg:hidden p-2 rounded-sm transition-colors duration-300 shrink-0"
               style={{ color: 'white' }}
               aria-label="Toggle menu"
             >
