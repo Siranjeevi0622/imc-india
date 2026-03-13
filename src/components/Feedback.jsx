@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, ArrowRight } from 'lucide-react';
 import Banner from '../components/Banner';
 
 const Feedback = () => {
@@ -144,8 +145,6 @@ const Feedback = () => {
           <div className="lg:col-span-2" data-aos="fade-left">
             <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-8">
 
-              {/* Contact Information */}
-              
               {/* Ratings Section */}
               <div className="rounded-2xl p-5 sm:p-8" style={{ backgroundColor: 'white' }}>
                 <h2
@@ -161,7 +160,6 @@ const Feedback = () => {
                       <label className="block text-xs sm:text-sm font-bold mb-2 sm:mb-3" style={{ color: '#000000' }}>
                         {field.label}
                       </label>
-                      {/* Radio options: 2-col on mobile, wrap naturally on larger */}
                       <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3">
                         {ratingOptions.map((option) => (
                           <label key={option} className="flex items-center gap-2 cursor-pointer">
@@ -220,6 +218,152 @@ const Feedback = () => {
           </div>
         </div>
       </div>
+
+      {/* ── CTS Section ── */}
+      <section
+        className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-t-2"
+        style={{ backgroundColor: 'white', borderColor: '#E5E7EB' }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div
+            className="rounded-2xl p-6 sm:p-10 border-2"
+            style={{ backgroundColor: '#F3F4F6', borderColor: '#E5E7EB' }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+              {/* Left: Text Content */}
+              <div data-aos="fade-right">
+                <p
+                  className="font-bold uppercase tracking-widest mb-2 sm:mb-3"
+                  style={{ color: '#2F5E8F', fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)' }}
+                >
+                  Looking for Calibration?
+                </p>
+                <h2
+                  className="font-black mb-3 sm:mb-4 tracking-tight leading-tight"
+                  style={{ color: '#1F2933', fontSize: 'clamp(1.4rem, 4vw, 2.8rem)' }}
+                >
+                  ALREADY A<br />
+                  <span style={{ color: '#2F5E8F' }}>SATISFIED CLIENT?</span>
+                </h2>
+                <p
+                  className="font-light leading-relaxed mb-6 sm:mb-8"
+                  style={{ color: '#111827', fontSize: 'clamp(0.875rem, 2vw, 1rem)' }}
+                >
+                  Thank you for taking the time to share your experience. If you'd like
+                  to continue working with us or explore more of our calibration and
+                  consultancy services, we're ready to help.
+                </p>
+
+                {/* Stats row */}
+                <div className="flex flex-wrap gap-6 sm:gap-10">
+                  {[
+                    { value: '100%', label: 'Confidential Feedback' },
+                    { value: 'NABL', label: 'Accredited Services' },
+                    { value: '2012', label: 'Serving Since' },
+                  ].map((stat, i) => (
+                    <div
+                      key={i}
+                      className="border-l-4 pl-4"
+                      style={{ borderColor: '#2F5E8F' }}
+                      data-aos="fade-up"
+                      data-aos-delay={i * 100}
+                    >
+                      <p
+                        className="font-black leading-none"
+                        style={{ color: '#2F5E8F', fontSize: 'clamp(1.3rem, 3.5vw, 2rem)' }}
+                      >
+                        {stat.value}
+                      </p>
+                      <p
+                        className="font-semibold mt-1"
+                        style={{ color: '#1F2933', fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)' }}
+                      >
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right: Action Card */}
+              <div data-aos="fade-left">
+                <div
+                  className="rounded-2xl p-5 sm:p-7 shadow-md border-t-4"
+                  style={{ backgroundColor: 'white', borderColor: '#2F5E8F' }}
+                >
+                  <h3
+                    className="font-black mb-1 tracking-tight"
+                    style={{ color: '#1F2933', fontSize: 'clamp(1rem, 2.5vw, 1.4rem)' }}
+                  >
+                    WORK WITH US AGAIN
+                  </h3>
+                  <p
+                    className="font-light mb-4 sm:mb-5"
+                    style={{ color: '#111827', fontSize: 'clamp(0.8rem, 1.8vw, 1rem)' }}
+                  >
+                    Reach out for your next calibration, training, or consultancy requirement.
+                  </p>
+
+                  {/* Feature list */}
+                  <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    {[
+                      'On-site & laboratory calibration available',
+                      'Consultancy for ISO/IEC 17025 & NABL accreditation',
+                      'Training programs for technicians & lab managers',
+                      'Quick turnaround for emergency requirements',
+                    ].map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 text-xs sm:text-sm font-medium"
+                        style={{ color: '#1F2933' }}
+                      >
+                        <span
+                          className="font-bold text-base leading-none mt-0.5 shrink-0"
+                          style={{ color: '#2F5E8F' }}
+                        >
+                          ●
+                        </span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link
+                      to="/enquiry"
+                      className="w-full sm:w-auto flex-1 px-6 py-3 text-white font-bold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center justify-center gap-2 text-sm sm:text-base"
+                      style={{ backgroundColor: '#2F5E8F' }}
+                    >
+                      ENQUIRE NOW
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </Link>
+                    <Link
+                      to="/calibration"
+                      className="w-full sm:w-auto flex-1 px-6 py-3 border-2 font-bold rounded-xl transition-all duration-300 text-sm sm:text-base text-center inline-flex items-center justify-center"
+                      style={{ borderColor: '#2F5E8F', color: '#2F5E8F' }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#2F5E8F';
+                        e.currentTarget.style.color = 'white';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = '#2F5E8F';
+                      }}
+                    >
+                      OUR SERVICES
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ── End CTS Section ── */}
+
     </main>
   );
 };

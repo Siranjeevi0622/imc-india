@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Feedback from './components/Feedback';
 import Accreditation from './components/Accreditation';
 import Enquiry from './components/Enquiry';  
+import TopBar from './components/Topbar';
 // ... import other pages
 
 
@@ -16,6 +17,7 @@ import Enquiry from './components/Enquiry';
 function App() {
   return (
     <>
+      <TopBar/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
