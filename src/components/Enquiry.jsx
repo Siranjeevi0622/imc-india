@@ -296,7 +296,7 @@ const Enquiry = () => {
                           <Icon className="w-4 h-4" style={{ color: '#2F5E8F' }} />
                         </div>
                         <div>
-                          <p className="text-xs sm:text-sm font-bold mb-1 uppercase tracking-wide" style={{ color: '#2F5E8F' }}>
+                          <p className="text-xs sm:text-sm font-bold mb-1 uppercase tracking-wide" style={{ color: '#000000' }}>
                             {info.title}
                           </p>
                           {info.details.map((d, i) => (
@@ -312,7 +312,7 @@ const Enquiry = () => {
                 <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t-2" style={{ borderColor: '#F3F4F6' }}>
                   <div className="flex items-center gap-2 mb-3 sm:mb-4">
                     <Clock className="w-4 h-4" style={{ color: '#2F5E8F' }} />
-                    <p className="text-xs sm:text-sm font-bold uppercase tracking-wide" style={{ color: '#2F5E8F' }}>
+                    <p className="text-xs sm:text-sm font-bold uppercase tracking-wide" style={{ color: '#000000' }}>
                       Business Hours
                     </p>
                   </div>
@@ -334,7 +334,7 @@ const Enquiry = () => {
 
                 {/* Why Choose IMC */}
                 <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t-2" style={{ borderColor: '#F3F4F6' }}>
-                  <p className="text-xs sm:text-sm font-bold uppercase tracking-wide mb-2 sm:mb-3" style={{ color: '#2F5E8F' }}>
+                  <p className="text-xs sm:text-sm font-bold uppercase tracking-wide mb-2 sm:mb-3" style={{ color: '#000000' }}>
                     Why Choose IMC?
                   </p>
                   <ul className="space-y-1.5 sm:space-y-2">
